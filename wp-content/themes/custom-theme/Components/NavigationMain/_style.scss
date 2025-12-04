@@ -1,0 +1,57 @@
+flynt-component[name='NavigationMain'] {
+  --navigation-height: 13rem;
+  background-color: transparent;
+  color: var(--color-text);
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-body);
+  z-index: 10;
+  
+
+  @media (max-width: $breakpoint-tablet-horizontal) {
+    display: none;
+  }
+
+  .navigation {
+    block-size: var(--navigation-height);
+    inset-block-start: 0;
+    inset-inline: 0;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 14rem;
+    padding: 0 10.8rem;
+  }
+
+
+
+
+  .button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem 2rem;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    color: var(--color-text);
+    font-size: 1.5rem;
+    font-weight: 500;
+    border-radius: 0.8rem;
+    font-size: 2rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+    margin-left: 0.6rem;
+  }
+
+
+  .spacer{
+    display: flex;
+    align-items: center;
+    gap: 3.5rem;
+    margin-right: 1.9rem;
+  }
+
+  @import 'Partials/logo';
+  @import 'Partials/menu';
+  @import 'Partials/languages';
+}

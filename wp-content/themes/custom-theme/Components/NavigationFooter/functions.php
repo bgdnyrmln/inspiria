@@ -1,0 +1,146 @@
+<?php
+
+namespace Flynt\Components\NavigationFooter;
+
+use Flynt\Utils\Options;
+use Timber\Timber;
+use Flynt\Utils\Asset;
+
+add_action('init', function (): void {
+    register_nav_menus([
+        'navigation_footer' => __('Navigation Footer', 'flynt'),
+    ]);
+});
+
+add_filter('Flynt/addComponentData?name=NavigationFooter', function (array $data): array {
+    $data['legal']['copyright'] = str_replace("{{year}}", date_i18n('Y'), $data['legal']['copyright']);
+    $data['menu'] = Timber::get_menu('navigation_footer') ?? Timber::get_pages_menu();
+    $data['logo'] = [
+        'src' => Asset::requireUrl('assets/images/logo.svg'),
+        'alt' => get_bloginfo('name')
+    ];
+    $data['dev'] = Asset::requireUrl('assets/images/logo-dev.svg');
+    return $data;
+});
+
+
+Options::addTranslatable('NavigationFooter', [
+    [
+        'label' => __('Content', 'flynt'),
+        'name' => 'contentTab',
+        'type' => 'tab',
+        'placement' => 'top',
+        'endpoint' => 0
+    ],
+    [
+        'label' => 'Contact Information',
+        'name' => 'contactInfo',
+        'type' => 'group',
+        'sub_fields' => [
+            [
+                'label' => 'Contact Info Tab',
+                'name' => 'contactInfoTab',
+                'type' => 'group',
+                'sub_fields' => [
+                    [
+                        'label' => 'Label',
+                        'name' => 'label',
+                        'type' => 'text',
+                    ],
+                    [
+                        'label' => 'Phone',
+                        'name' => 'phone',
+                        'type' => 'text',
+                    ],
+                    [
+                        'label' => 'Email',
+                        'name' => 'email',
+                        'type' => 'text',
+                    ],
+                ],
+            ],
+            [
+                'label' => 'Address Tab',
+                'name' => 'addressTab',
+                'type' => 'group',
+                'sub_fields' => [
+                    [
+                        'label' => 'Label',
+                        'name' => 'label',
+                        'type' => 'text',
+                    ],
+                    [
+                        'label' => 'Address',
+                        'name' => 'address',
+                        'type' => 'text',
+                    ],
+                ],
+            ]
+        ]
+    ],
+    [
+        'label' => 'Socials Section',
+        'name' => 'socialsSection',
+        'type' => 'group',
+        'sub_fields' => [
+            [
+                'label' => 'Label',
+                'name' => 'label',
+                'type' => 'text',
+            ],
+            [
+                'label' => 'Socials',
+                'name' => 'socials',
+                'type' => 'repeater',
+                'button_label' => 'Add Social Link',
+                'sub_fields' => [
+                    [
+                        'label' => 'Icon',
+                        'name' => 'icon',
+                        'type' => 'image',
+                        'return_format' => 'array',
+                        'preview_size' => 'thumbnail',
+                        'library' => 'all',
+                    ],
+                    [
+                        'label' => 'Link',
+                        'name' => 'link',
+                        'type' => 'url',
+                    ],
+                ]
+            ],
+        ]
+    ],
+    [
+        'label' => 'background image',
+        'name' => 'backgroundImage',
+        'type' => 'image',
+        'return_format' => 'array',
+        'preview_size' => 'thumbnail',
+    ],
+    [
+        'label' => 'Privacy',
+        'name' => 'privacy',
+        'type' => 'link',
+        'return_format' => 'array'
+    ],
+    [
+        'label' => 'Cookies',
+        'name' => 'cookies',
+        'type' => 'link',
+        'return_format' => 'array'
+    ],
+    [
+        'label' => 'Legal',
+        'name' => 'legal',
+        'type' => 'group',
+        'sub_fields' => [
+            [
+                'label' => 'Copyright',
+                'name' => 'copyright',
+                'type' => 'text',
+                'default_value' => '©&nbsp;' . date_i18n('Y') . ' ' . get_bloginfo('name'),
+            ],
+        ]
+    ],
+]);

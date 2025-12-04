@@ -1,0 +1,14 @@
+<ul class="menu">
+  {% for item in items %}
+    {% if item.children %}
+      <li class="link-item {{- item.current ? ' current-menu-item' }} has-children">
+        <a class="link" href="{{ item.link|e('esc_url') }}" {{- item.is_target_blank ? ' target="_blank" rel="noopener noreferrer"' -}}>{{ item.title }}</a>
+      </li>
+    {% else %}
+      <li class="link-item {{- item.current ? ' current-menu-item' }}">
+        <a class="link" href="{{ item.link|e('esc_url') }}" {{- item.is_target_blank ? ' target="_blank" rel="noopener noreferrer"' -}}>{{ item.title }}</a>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
+
