@@ -1,13 +1,11 @@
 <flynt-component name="NavigationMain">
   <nav class="navigation" aria-label="{{ __('Main Navigation', 'flynt') }}">
       {% include 'Partials/_logo.twig' with {'logo': logo, 'site': site} only %}
-      <div class="spacer">
-        {% if menu %}
-          {% include 'Partials/_menu.twig' with {'items': menu.items} only %}
-        {% endif %}
-        {% if featured %}
-          <a href="{{ featured.url }}" class="button featured">{{ featured.title }}</a>
-        {% endif %}
-      </div>
+      {% if menu %}
+        {% include 'Partials/_menu.twig' with {'items': menu.items} only %}
+      {% endif %}
+      {% if featured %}
+        <a href="{{ featured.url }}" class="button-featured">{{ featured.title }}</a>
+      {% endif %}
   </nav>
 </flynt-component>

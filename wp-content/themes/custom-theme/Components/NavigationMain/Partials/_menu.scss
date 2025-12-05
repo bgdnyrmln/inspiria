@@ -2,16 +2,13 @@
   align-items: center;
   display: flex;
   list-style: none;
-  margin-inline-end: -1.5rem;
-  margin-inline-start: auto;
+  gap: 4rem;
+
 
   .link {
     color: currentColor;
     text-decoration: none;
     transition: color 0.2s ease-in-out;
-    will-change: color;
-    padding: 1.5rem 2.7rem;
-
     &:hover {
       color: var(--color-accent);
     }

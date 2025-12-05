@@ -3,92 +3,102 @@ flynt-component[name="NavigationFooter"] {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  display: flex;
   color: var(--color-text-white);
   font-size: var(--font-size-body-small);
   overflow: hidden;
-  height: 64.76rem;
   letter-spacing: -0.01rem;
+
+  .footer-container{
+    display: flex;
+    height: 48.7rem;    
+    margin: 0 auto;
+  }
 
 
   h1{
-    font-size: 14pt;
+    font-size: 1.4rem;
     font-weight: 400;
     text-transform: uppercase;
     color: var(--color-secondary);
+    margin-bottom: 0.9rem;
   }
   p{
-    font-size: 14pt;
+    font-size: 1.4rem;
     font-weight: 300;
   }
 
   .footer-left {
-    flex: 0 0 58.2%;
+    flex: 58;
     display: flex;
+    justify-content: center;
     flex-direction: column;
-    padding: 7rem 7.4rem 0 10.6rem;
-    width: 100%;
-    min-height: 64.75rem;
+    align-items: center;
+    padding: 5.4rem 5.7rem 0rem 8rem;
     background-color: rgba(0, 0, 0, 0.7);
   }
 
   .contact-info {
     display: flex;
     border-collapse: collapse;
-    padding-bottom: 6rem;
+    padding-bottom: 4.5rem;
   }
 
   .item{
-    flex: 0 0 43.3%;
+    flex: 0 0 30.5rem;
     display: flex;
     flex-direction: column;
-    gap: 2.6rem;
-    line-height: 20pt;
+    gap: 1rem;
+    line-height: 2rem;
+    width: 20rem;
   }
 
+
   .item:last-child{
-    flex: 0 0 40%;
+    flex: 0 0 30rem;
   }
 
   .socials {
     display: flex;
     align-items: center;
-    gap: 27%;
-    padding: 4.6rem 0 4.3rem 0;
+    padding: 3.4rem 0 3.2rem 0;
+    gap: 19rem;
+    h1{
+      margin: 0;
+      word-spacing: 0.01rem;
+    }
   }
 
   .left-section{
-    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    width: 70.2rem;
   }
 
   .icon{
-    width: 4rem;
-    height: 4rem;
-    margin-top: 1px;
-  }
+    width: 3.09rem;
+
+}
 
   .footer-right {
     background-color: rgba(0, 0, 0, 0.85);
-    width: 100%;
+    flex: 50;
   }
 
 
   .logo-footer{
-    margin: 0.1rem 3rem 0 0;
-    width: 17.5rem;
+    inline-size: 13.2rem;
+    margin-right:2.6rem;
   }
 
 
   .legal{
-    margin-top: 0.3rem;
-    width: 18.8rem;
+    inline-size: 13.8rem;
   }
 
 
   .privacy-link{
     color: rgba(255, 255, 255);
     opacity: 0.5;
-    font-size: 14pt;
+    font-size: 1.4rem;
     text-decoration: none;
     font-weight: 300;
   }
@@ -98,9 +108,10 @@ flynt-component[name="NavigationFooter"] {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 3.2rem 0 3.6rem 0;
+    padding: 3.6rem 0 3.6rem 0;
     border: none;
     height: 100%;
+
   }
 
   @import 'Partials/menu';

@@ -1,8 +1,10 @@
 .menu {
   align-items: center;
   display: flex;
+  justify-content: space-between;
   list-style: none;
-  height: 13rem;
+  padding: 4rem 1.5rem 3.8rem 0;
+  word-spacing: 0.1rem;
 
   .link {
     color: currentColor;
@@ -13,7 +15,6 @@
 
   .link-item {
     width: fit-content;
-    margin-right: 5.6rem;
     &:hover {
       .sub-menu {
         display: block;
