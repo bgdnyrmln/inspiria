@@ -1,0 +1,79 @@
+flynt-component[name="ContactForm"] {
+  font-size: 1.4rem;
+
+  .contact-form{
+    padding: 7.9rem 0 0 7rem;
+  }
+
+  .form-group{
+    padding: 1.1rem 0 0 0;
+    width: 50rem;
+  }
+
+  .contact-form-input{
+    width: 21.6rem;
+    height: 4.1rem;
+    border: none;
+    border-bottom: 1px solid rgba(#ffffff, 0.2);
+    background-color: transparent;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    margin-right: 1.7rem;
+    padding: 1.5rem;
+    letter-spacing: -0.015rem;
+  }
+
+  .contact-form-input::placeholder{
+    color: rgba(#ffffff, 0.8);
+  }
+
+  .contact-form-input:focus{
+    outline: none;
+    border-bottom: 1px solid rgba(#ffffff, 0.4);
+  }
+
+
+  .contact-form-textarea:focus{
+    outline: none;
+    border-bottom: 1px solid rgba(#ffffff, 0.4);
+  }
+
+  .contact-form-textarea {
+    padding-top: 1rem;
+    padding-left: 1.5rem;
+    width: 45.2rem;
+    padding-bottom:10.3rem;
+    line-height: 1.4;
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    border-bottom: 1px solid rgba(#ffffff, 0.2);
+    letter-spacing: -0.015rem;
+    resize: none;
+  }
+
+
+  .contact-form-textarea::placeholder{
+    color: rgba(#ffffff, 0.8);
+  }
+
+
+  .button-submit{
+    display: flex;
+    align-items: center;
+    border: none;
+    color: var(--color-secondary);
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin: 2rem 0 0 31.7rem;   
+    gap: 1.6rem; 
+    transition: all 0.3s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+}
+
+

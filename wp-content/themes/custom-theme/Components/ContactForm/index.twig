@@ -1,0 +1,23 @@
+<flynt-component name="ContactForm" style="--footer-bg: url('{{ backgroundImage }}');">
+  <div class = "contact-form-container">  
+    <div class = "contact-form-left">
+      <form method="post" class="contact-form">
+        <h1>{{ formSettings.formTitle }}</h1>
+        <div class="form-group">
+          {% for field in formSettings.fields %}
+            <input {% if field.fieldType == "textarea" %}class="contact-form-textarea"{% else %}class="contact-form-input"{% endif %} type="{{ field.fieldType }}" id="{{ field.fieldName }}" name="{{ field.fieldName }}" placeholder="{{ field.fieldLabel }}" {% if field.required %}required{% endif %}>
+          {% endfor %}
+        </div>
+        {% if formSettings.submitButtonText %}
+          <button class="button-submit" type="submit">{{ formSettings.submitButtonText }}
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="32" height="32" rx="16" fill="#D5D8FF"/>
+              <path d="M10.9092 16H21.091" stroke="#10001D" stroke-width="1.45455" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M16 10.9092L21.0909 16.0001L16 21.091" stroke="#10001D" stroke-width="1.45455" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        {% endif %}
+      </form>
+    </div>
+  </div>
+</flynt-component>
