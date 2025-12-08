@@ -2,11 +2,12 @@
   align-items: center;
   display: flex;
   list-style: none;
-  gap: 4rem;
+  gap: 4.1rem;
 
 
   .link {
     color: currentColor;
+    letter-spacing: 0.01rem;
     text-decoration: none;
     transition: color 0.2s ease-in-out;
     &:hover {

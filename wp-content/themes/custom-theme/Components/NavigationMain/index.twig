@@ -5,7 +5,7 @@
         {% include 'Partials/_menu.twig' with {'items': menu.items} only %}
       {% endif %}
       {% if featured %}
-        <a href="{{ featured.url }}" class="button-featured">{{ featured.title }}</a>
+        <a href="{{ featured.url }}" class="button">{{ featured.title }}</a>
       {% endif %}
   </nav>
 </flynt-component>

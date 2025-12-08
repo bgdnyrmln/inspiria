@@ -1,39 +1,95 @@
-flynt-component[name='NavigationTop'] {
-  background-color: #0F0F0F;
+flynt-component[name='BlockHero'] {
+  position: relative;
+  background-image: var(--hero-bg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   color: var(--color-text-inverse);
   font-family: var(--font-family-body);
   font-size: var(--font-size-small);
-  text-align: center;
+  height: 68.4rem;
+  display: flex;
 
-  
-  @media (max-width: $breakpoint-tablet-horizontal) {
-    font-size: var(--font-size-small);
+  .hero-left {
+    height: 68.4rem;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      color: var(--color-secondary);
+      font-weight: 500;
+      letter-spacing: 0.01rem;
+    }
+
+    h2 {
+      font-size: 4.5rem;
+      font-weight: 800;
+      margin-top: 1.5rem;
+      line-height: 5.6rem;
+      letter-spacing: 0.002rem;
+      margin-bottom: 1.6rem;
+      width: 55rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+      font-weight: 300;
+      margin-bottom: 3.2rem;
+      line-height: 1.5;
+      width: 45rem;
+      line-height: 1.9rem;
+      letter-spacing: 0.012rem;
+    }
+
+    .button {
+      width: 15.8rem;
+      color: black;
+      background-color: var(--color-secondary);
+      border: none;
+    }
   }
 
-  .banner{
+  .hero-text{
+    margin-top: 18.8rem;
+    margin-left: 8.1rem;
+  }
+
+  .hero-right {
+    margin-left: auto;
+    margin-top: 6.5rem;
+    margin-right: 8rem;
     display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 48.2%;
-    align-items: center;
-    height: 5.4rem; 
-    font-size: 14pt;
-    font-weight: 400;
-    font-family: 'Geologica', sans-serif;
   }
+  
 
-  .link{
-    color: #D5D8FF;
-    text-decoration: none;
+  .bubble {
+    width: 12.2rem;
+    height: 12.2rem;
+    border: 1px solid rgba(#ffffff, 0.2);
+    border-radius: 50%;
+    color: white;
     display: flex;
+    justify-content: center;  
     align-items: center;
-    gap: 2.3rem;
-    transition: all 0.3s ease;
-    &:hover {
-      opacity: 0.8;
-    }
-
-    @media(max-width: $breakpoint-tablet-horizontal) {
-      display: none;
-    }
+    text-align: center;
+    font-size: 1.4rem;
+    letter-spacing: 0.02rem;
   }
+}
+
+flynt-component[name='BlockHero']::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right,rgba(#10001D, 0.5), rgba(0, 0, 0, 0));
+  z-index: 1;
+}
+
+flynt-component[name='BlockHero'] > * {
+  position: relative;
+  z-index: 2;
 }

@@ -28,6 +28,7 @@ add_action('Flynt/afterRegisterComponents', function (): void {
                     Components\BlockContacts\getACFLayout(),
                     Components\BlockVideoOembed\getACFLayout(),
                     Components\BlockExample\getACFLayout(),
+                    Components\BlockHero\getACFLayout(),
                     // Add components here
                 ],
             ],
