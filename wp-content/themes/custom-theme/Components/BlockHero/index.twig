@@ -1,5 +1,5 @@
 <flynt-component load:on="idle" name="BlockHero" style="--hero-bg: url('{{ image }}');">
-
+  <div class="hero-container">
     <div class = "hero-left">
       <div class = "hero-text">
         <h1>{{ title }}</h1>
@@ -10,12 +10,12 @@
     </div>
     <div class = "hero-right">
     {% if bubble.0 %}
-      <div class = "bubble" style="margin-top: 24.7rem;">
+      <div class = "bubble" style="margin-top: 24.7rem; margin-right:0.2rem;">
         {{ bubble.0.content }}
       </div>
     {% endif %}
     {% if bubble.1 %}
-      <div class = "bubble" style="margin-right: 2rem; margin-top: 0.2rem;">
+      <div class = "bubble" style="margin-right: 2rem; margin-top: 0.2rem">
         {{ bubble.1.content }}
       </div>
     {% endif %}
@@ -37,5 +37,18 @@
       {% endif %}
       </div>
     </div>
-
+    <div class="hero-arrow">
+      <svg width="34" height="96" viewBox="0 0 34 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_114_58)">
+        <path d="M17.9999 8.5L17.9999 7.5L15.9999 7.5L15.9999 8.5L16.9999 8.5L17.9999 8.5ZM15.9999 86.6368C15.9999 87.1891 16.4476 87.6368 16.9999 87.6368C17.5522 87.6368 17.9999 87.1891 17.9999 86.6368L16.9999 86.6368L15.9999 86.6368ZM16.9999 8.5L15.9999 8.5L15.9999 86.6368L16.9999 86.6368L17.9999 86.6368L17.9999 8.5L16.9999 8.5Z" fill="white"/>
+        <path d="M25.4851 79.0002L16.9998 87.4855L8.51449 79.0002" stroke="white" stroke-width="2" stroke-linecap="square"/>
+        </g>
+        <defs>
+        <clipPath id="clip0_114_58">
+        <rect width="96" height="34" fill="white" transform="translate(34 1.48619e-06) rotate(90)"/>
+        </clipPath>
+        </defs>
+      </svg>
+    </div>
+  </div>
 </flynt-component>

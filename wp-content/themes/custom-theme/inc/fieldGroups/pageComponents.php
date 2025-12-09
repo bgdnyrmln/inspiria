@@ -29,6 +29,7 @@ add_action('Flynt/afterRegisterComponents', function (): void {
                     Components\BlockVideoOembed\getACFLayout(),
                     Components\BlockExample\getACFLayout(),
                     Components\BlockHero\getACFLayout(),
+                    Components\BlockAbout\getACFLayout(),
                     // Add components here
                 ],
             ],
