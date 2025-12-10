@@ -30,6 +30,7 @@ add_action('Flynt/afterRegisterComponents', function (): void {
                     Components\BlockExample\getACFLayout(),
                     Components\BlockHero\getACFLayout(),
                     Components\BlockAbout\getACFLayout(),
+                    Components\BlockActivities\getACFLayout(),
                     // Add components here
                 ],
             ],

@@ -1,0 +1,122 @@
+<flynt-component load:on="idle" name="BlockActivities">
+  <div class="activities-container">
+    <div class="activities-left">
+      <h1>{{ title }}</h1>
+      <p>{{ description }}</p>
+    </div>
+    <svg class="dotted-overlay" width="757" height="274" viewBox="0 0 757 274" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><rect width="757" height="274" fill="url(#pattern0_14_550)" fill-opacity="0.1"/><defs><pattern id="pattern0_14_550" patternUnits="userSpaceOnUse" patternTransform="matrix(10.15 0 0 10.15 0 0)" preserveAspectRatio="none" viewBox="0 0 14.5 14.5" width="1" height="1"><g id="pattern0_14_550_inner"><circle cx="2.5" cy="2.5" r="2.5" fill="#D5D8FF"/></g></pattern></defs></svg>
+    <div class="activities-right">
+      <div class="activities-list">
+      {% for activity in activities %}
+        <div class="activity-item">
+          <h2>{{ activity.title }}</h2>
+          <p>{{ activity.description }}</p>
+        </div>
+      {% endfor %}
+      </div>
+      <div class="activities-slider">
+        <div class="dots">
+          {% for item in activities %}
+            <button class="point"></button>
+          {% endfor %}
+        </div>
+        <div class="arrows">
+          <button class="swipe-left"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 12H5" stroke="#10001D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 5L5 12L12 19" stroke="#10001D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button class="swipe-right"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12H19" stroke="#10001D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 5L19 12L12 19" stroke="#10001D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="activities-bottom">
+  <svg class="dotted-overlay" width="710" height="83" viewBox="0 0 710 83" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><rect width="710" height="83" fill="url(#pattern0_114_12)" fill-opacity="0.1"/><defs><pattern id="pattern0_114_12" patternUnits="userSpaceOnUse" patternTransform="matrix(10.15 0 0 10.15 0 0)" preserveAspectRatio="none" viewBox="0 0 14.5 14.5" width="1" height="1"><g id="pattern0_114_12_inner"><circle cx="2.5" cy="2.5" r="2.5" fill="#D5D8FF"/></g></pattern></defs></svg>
+    <h1>{{ bottomText }}</h1>
+  </div>
+</flynt-component>
+
+
+
+<script>
+let accumulated = 0;
+let wheelLocked = false;
+const WHEEL_COOLDOWN = 800; 
+const THRESHOLD = 40; 
+
+document.addEventListener(
+  "wheel",
+  (e) => {
+    const isTouchpadSwipe = Math.abs(e.deltaX) > Math.abs(e.deltaY);
+    const isAltScroll = e.altKey;
+
+    if (!isTouchpadSwipe && !isAltScroll) return;
+
+    e.preventDefault();
+
+    if (wheelLocked) return;
+    const delta = isTouchpadSwipe ? e.deltaX : e.deltaY;
+    accumulated += delta;
+
+    if (accumulated > THRESHOLD) {
+      document.dispatchEvent(new Event("scroll-right"));
+      accumulated = 0; 
+      wheelLocked = true;
+    } else if (accumulated < -THRESHOLD) {
+      document.dispatchEvent(new Event("scroll-left"));
+      accumulated = 0; 
+      wheelLocked = true;
+    }
+
+    if (wheelLocked) {
+      setTimeout(() => {
+        wheelLocked = false;
+      }, WHEEL_COOLDOWN);
+    }
+  },
+  { passive: false }
+);
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const slider = document.querySelector("flynt-component[name='BlockActivities'] .activities-list");
+  const items = slider.querySelectorAll(".activity-item");
+  const dots = document.querySelectorAll("flynt-component[name='BlockActivities'] .point");
+  const btnLeft = document.querySelector("flynt-component[name='BlockActivities'] .swipe-left");
+  const btnRight = document.querySelector("flynt-component[name='BlockActivities'] .swipe-right");
+
+  let currentIndex = 0;
+  const itemWidth = items[0].offsetWidth;
+
+  function goTo(index) {
+    currentIndex = Math.max(0, Math.min(index, items.length - 1));
+    slider.scrollTo({
+      left: currentIndex * itemWidth,
+      behavior: "smooth",
+    });
+    updateDots();
+  }
+
+  function updateDots() {
+    dots.forEach((dot, i) => {
+      dot.classList.toggle("active", i === currentIndex);
+    });
+  }
+
+
+  btnLeft.addEventListener("click", () => goTo(currentIndex - 1));
+  btnRight.addEventListener("click", () => goTo(currentIndex + 1));
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => goTo(i));
+  });
+
+  document.addEventListener("scroll-left", () => {
+    goTo(currentIndex - 1);
+  });
+
+  document.addEventListener("scroll-right", () => {
+    goTo(currentIndex + 1);
+  });
+
+  updateDots();
+});
+
+</script>

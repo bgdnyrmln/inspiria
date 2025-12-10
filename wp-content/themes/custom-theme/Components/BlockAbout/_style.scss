@@ -34,7 +34,7 @@ flynt-component[name='BlockAbout'] {
   }
 
   p {
-    margin-top:11.1rem;
+    margin-top:11rem;
     width: 45rem;
     margin-left: 12.8rem;
     line-height: 1.9rem;
@@ -85,7 +85,7 @@ flynt-component[name='BlockAbout']::before {
   inset: 0;
   background: url("https://grainy-gradients.vercel.app/noise.svg") repeat;
   background-size: 50%;
-  opacity: 0.12; 
+  opacity: 0.1; 
   pointer-events: none;
   z-index: 0;
 }

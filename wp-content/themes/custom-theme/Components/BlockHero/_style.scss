@@ -59,9 +59,13 @@ flynt-component[name='BlockHero'] {
 
     .button {
       width: 15.8rem;
-      color: black;
+      color: #0F0F0F;
       background-color: var(--color-secondary);
       border: none;
+      transition: 0.3s ease;
+      &:hover {
+        background-color: #b3b8fb;
+      }
     }
   }
 
@@ -97,6 +101,12 @@ flynt-component[name='BlockHero'] {
     position: absolute;
     top: 62.2rem;
     left:8rem;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(0.5rem);
+      opacity: 0.8;
+    }
   }
 }
 
