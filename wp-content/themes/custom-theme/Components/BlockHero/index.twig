@@ -60,7 +60,7 @@
 <script>
   document.getElementById('scroll-down-button').addEventListener('click', function() {
     window.scrollBy({
-      top: 72.4 * parseFloat(getComputedStyle(document.documentElement).fontSize),
+      top: 72.4 * parseFloat(getComputedStyle(document.documentElement).fontSize) - document.documentElement.scrollTop,
       left: 0,
       behavior: 'smooth'
     });

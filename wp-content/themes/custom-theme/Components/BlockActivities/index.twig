@@ -41,42 +41,44 @@ let wheelLocked = false;
 const WHEEL_COOLDOWN = 800; 
 const THRESHOLD = 40; 
 
-document.addEventListener(
-  "wheel",
-  (e) => {
-    const isTouchpadSwipe = Math.abs(e.deltaX) > Math.abs(e.deltaY);
-    const isAltScroll = e.altKey;
-
-    if (!isTouchpadSwipe && !isAltScroll) return;
-
-    e.preventDefault();
-
-    if (wheelLocked) return;
-    const delta = isTouchpadSwipe ? e.deltaX : e.deltaY;
-    accumulated += delta;
-
-    if (accumulated > THRESHOLD) {
-      document.dispatchEvent(new Event("scroll-right"));
-      accumulated = 0; 
-      wheelLocked = true;
-    } else if (accumulated < -THRESHOLD) {
-      document.dispatchEvent(new Event("scroll-left"));
-      accumulated = 0; 
-      wheelLocked = true;
-    }
-
-    if (wheelLocked) {
-      setTimeout(() => {
-        wheelLocked = false;
-      }, WHEEL_COOLDOWN);
-    }
-  },
-  { passive: false }
-);
-
-
 document.addEventListener("DOMContentLoaded", function () {
   const slider = document.querySelector("flynt-component[name='BlockActivities'] .activities-list");
+
+  // --- Wheel listener only when cursor is over the slider ---
+  slider.addEventListener(
+    "wheel",
+    (e) => {
+      const isTouchpadSwipe = Math.abs(e.deltaX) > Math.abs(e.deltaY);
+      const isAltScroll = e.altKey;
+
+      if (!isTouchpadSwipe && !isAltScroll) return;
+
+      e.preventDefault();
+
+      if (wheelLocked) return;
+      const delta = isTouchpadSwipe ? e.deltaX : e.deltaY;
+      accumulated += delta;
+
+      if (accumulated > THRESHOLD) {
+        document.dispatchEvent(new Event("scroll-right"));
+        accumulated = 0; 
+        wheelLocked = true;
+      } else if (accumulated < -THRESHOLD) {
+        document.dispatchEvent(new Event("scroll-left"));
+        accumulated = 0; 
+        wheelLocked = true;
+      }
+
+      if (wheelLocked) {
+        setTimeout(() => {
+          wheelLocked = false;
+        }, WHEEL_COOLDOWN);
+      }
+    },
+    { passive: false }
+  );
+
+  // --- Slider logic ---
   const items = slider.querySelectorAll(".activity-item");
   const dots = document.querySelectorAll("flynt-component[name='BlockActivities'] .point");
   const btnLeft = document.querySelector("flynt-component[name='BlockActivities'] .swipe-left");
@@ -100,7 +102,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-
   btnLeft.addEventListener("click", () => goTo(currentIndex - 1));
   btnRight.addEventListener("click", () => goTo(currentIndex + 1));
 
@@ -108,13 +109,8 @@ document.addEventListener("DOMContentLoaded", function () {
     dot.addEventListener("click", () => goTo(i));
   });
 
-  document.addEventListener("scroll-left", () => {
-    goTo(currentIndex - 1);
-  });
-
-  document.addEventListener("scroll-right", () => {
-    goTo(currentIndex + 1);
-  });
+  document.addEventListener("scroll-left", () => goTo(currentIndex - 1));
+  document.addEventListener("scroll-right", () => goTo(currentIndex + 1));
 
   updateDots();
 });

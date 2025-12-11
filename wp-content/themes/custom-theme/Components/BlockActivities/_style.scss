@@ -156,6 +156,9 @@ flynt-component[name='BlockActivities'] {
   
 
   .activities-bottom{
+    max-width: 144rem;
+    margin: 0 auto;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -163,7 +166,7 @@ flynt-component[name='BlockActivities'] {
 
     .dotted-overlay{
       left: 0;
-      bottom:0;
+      bottom:-3rem;
     }
 
     h1{

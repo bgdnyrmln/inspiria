@@ -1,0 +1,27 @@
+<flynt-component load:on="idle" name="BlockTeam">
+  <div class="team-wrapper">
+    <div class="team-container">
+      <div class = "team-main-title">
+        <h1>{{ title }}</h1>
+      </div>
+      <div class = "team-subtitle">
+        <div class = "bubble">
+          {{ bubble }}
+        </div>
+        <h2>{{ subtitle }}</h2>
+        <p>{{ description }}</p>
+      </div>
+    </div>
+    <div class="team-skills">
+      <h1 class = "skill-title">{{ skillsgroup.skilltitle }}</h1>
+      <div class="skills-list">
+        {% for skill in skillsgroup.skills %}
+          <div class="skill-item">
+            <p>{{ skill.title }}</p>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <img class="bottom-image" src="{{ skillsgroup.bottomimage }}">
+  </div>
+</flynt-component>
