@@ -1,10 +1,23 @@
-.logo {
-  display: block;
-  flex-shrink: 0;
-  text-decoration: none;
+.home .logo {
+    display: block;
+    flex-shrink: 0;
+    text-decoration: none;
 
-  &-image {
-    inline-size: 22rem;
-    transition: inline-size 0.3s ease-in-out;
+    &-image {
+      inline-size: 22rem;
+      transition: inline-size 0.3s ease-in-out;
+    }
   }
-}
+
+
+.logo {
+    display: block;
+    flex-shrink: 0;
+    text-decoration: none;
+    margin-left: 1.2rem;
+
+    &-image {
+      inline-size: 22rem;
+      transition: inline-size 0.3s ease-in-out;
+    }
+  }

@@ -1,15 +1,14 @@
-flynt-component[name='NavigationTop'] {
+
+flynt-component[name='NavigationTop']{
+  display: none;
+}
+
+.home flynt-component[name='NavigationTop'] {
+  display: block;
   background-color: #0F0F0F;
   color: var(--color-text-inverse);
   font-family: var(--font-family-body);
   font-size: var(--font-size-small);
-
-
-
-  
-  @media (max-width: $breakpoint-tablet-horizontal) {
-    font-size: var(--font-size-small);
-  }
 
   .banner-top{
     margin: auto;

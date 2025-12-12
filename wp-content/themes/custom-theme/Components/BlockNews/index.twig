@@ -1,0 +1,29 @@
+<flynt-component name="BlockNews">
+<div class = "news-container">
+  <div class = "news-left">
+    {% if title %}
+      <h2>{{ title }}</h2>
+    {% endif %}
+    {% if subtitle %}
+      <p>{{ subtitle }}</p>
+    {% endif %}
+    {% if link %}
+      <a href="{{ link.url }}" class="link">{{ link.title }} <svg width="5" height="9" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.5 8.5L4.5 4.5L0.5 0.5" stroke="black" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    {% endif %}
+  </div>
+  {% if posts|length %}
+    <div class="news-list">
+      {% for post in posts %}
+        <article class="news-item">
+          <time class="date" datetime="{{ post.date|date('c') }}">
+            {{ post.date|date('j. M') }}
+          </time>
+          <a href="{{ post.link }}"><img class = "thumbnail"  src="{{ post.thumbnail }}"></a>
+          <a href="{{ post.link }}" class = "link">{{ post.title }}</a>
+        </article>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>
+
+</flynt-component>

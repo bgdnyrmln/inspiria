@@ -1,27 +1,21 @@
 <flynt-component name="GridPostsArchive" load:on="visible">
   <div class="container">
-    <h2>{{ __('Jaunākie raksti un industrijas aktualitātes', 'flynt') }}</h2>
+    <div class="posts-header">
+      {% if title %}
+        <h2 class="archive-title">{{ title }}</h2>
+      {% endif %}
+      {% if subtitle %}
+        <p class="archive-subtitle">{{ subtitle }}</p>
+      {% endif %}
+    </div>
+
     {% if posts|length > 0 %}
       <ul data-ref="posts" class="posts">
         {% for post in posts %}
           {% set aria_labelledby_id = uuid ~ '-' ~ loop.index %}
           <li class="post" id="{{ aria_labelledby_id }}">
              <a href="{{ post.link }}" class="post">
-              {% if post.thumbnail %}
-                <img class="post-image lazyload"
-                  src="{{ post.thumbnail.src|resizeDynamic(530) }}"
-                  width="{{ 530 }}"
-                  height="{{ 530 }}"
-                  srcset="{{ placeholderImage(530, 530, 'rgba(125, 125, 125, 0.1)') }}"
-                  data-srcset="
-                    {{ post.thumbnail.src|resizeDynamic(530, 530, 'center') }} 530w,
-                    {{ post.thumbnail.src|resizeDynamic(382, 382, 'center') }} 382w,
-                    {{ post.thumbnail.src|resizeDynamic(282, 282, 'center') }} 282w"
-                  data-sizes="auto"
-                  alt="{{ post.thumbnail.alt|e }}">
-              {% else %}
-                <div class="post-placeholder"></div>
-              {% endif %}
+              <img class="post-image lazyload" src="{{ post.thumbnail }}">
               <div class="post-content">
                 {% if post.title %}
                   <h2 class="post-title">{{ post.title }}</h2>

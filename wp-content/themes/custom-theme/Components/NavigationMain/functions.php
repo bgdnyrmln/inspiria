@@ -16,10 +16,8 @@ add_filter('Flynt/addComponentData?name=NavigationMain', function (array $data):
     $data['languages'] = apply_filters('wpml_active_languages', null, 'orderby=id&order=asc');
     $data['menu'] = Timber::get_menu('navigation_main') ?? Timber::get_pages_menu();
     $data['logo'] = [
-        'src' => get_theme_mod('custom_logo') ? wp_get_attachment_image_url(get_theme_mod('custom_logo'), 'full') : Asset::requireUrl('assets/images/logo.svg'),
-        'alt' => get_bloginfo('name')
+        'src' => Asset::requireUrl('assets/images/logo.svg'),
     ];
-
     return $data;
 });
 

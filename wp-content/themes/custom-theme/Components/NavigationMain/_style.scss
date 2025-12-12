@@ -1,4 +1,5 @@
-flynt-component[name='NavigationMain'] {
+
+.home flynt-component[name='NavigationMain'] {
   position: absolute;
   left: 0;
   right: 0;
@@ -26,16 +27,60 @@ flynt-component[name='NavigationMain'] {
     padding: 0 8rem;
   }
 
-.button{
-  margin-right: 1.5rem;
-  margin-left: -12rem;
-  transition: all 0.3s ease;
-  &:hover{
-    background-color: rgba(0,0,0,0.2);
+  .button{
+    margin-right: 1.5rem;
+    margin-left: -12rem;
+    transition: all 0.3s ease;
+    background-color: transparent;
+    width: 15.6rem;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    &:hover{
+      background-color: rgba(0,0,0,0.2);
+    }
   }
 }
 
+
+flynt-component[name='NavigationMain']{
+  width: 100%;
+  max-width: 144rem;
+  margin: 0 auto;
+  --navigation-height: 13rem;
+  color: var(--color-text);
+  font-size: var(--font-size-body);
+  z-index: 10;
+
+
+
+  @media (max-width: $breakpoint-tablet-horizontal) {
+    display: none;
+  }
+
+  .navigation {
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 11.9rem;
+    padding: 0 6.8rem;
+  }
+
+  .button{
+    margin-right: 2.8rem;
+    margin-left: -13rem;
+    width: 15.5rem;
+    border: none;
+    color: #10001D;
+    background-color: var(--color-secondary);
+    transition: all 0.3s ease;
+    &:hover{
+        background-color: #b3b8fb;
+    }
+  }
+}
+
+
+
   @import 'Partials/logo';
   @import 'Partials/menu';
-  @import 'Partials/languages';
-}
