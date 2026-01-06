@@ -9,26 +9,24 @@
       {% endif %}
     </div>
 
-    {% if posts|length > 0 %}
-      <ul data-ref="posts" class="posts">
-        {% for post in posts %}
-          {% set aria_labelledby_id = uuid ~ '-' ~ loop.index %}
-          <li class="post" id="{{ aria_labelledby_id }}">
-             <a href="{{ post.link }}" class="post">
-              <img class="post-image lazyload" src="{{ post.thumbnail }}">
-              <div class="post-content">
-                {% if post.title %}
-                  <h2 class="post-title">{{ post.title }}</h2>
-                {% endif %}
-                <p class="post-description">{{ post.excerpt({words: 25, read_more: none}) }}</p>
-              </div>
-            </a>
-          </li>
-        {% endfor %}
-      </ul>
+    {% if posts|length %}
+    <div class="news-list grid">
+      {% for post in posts %}
+        <article class="news-item">
+          <time class="date" datetime="{{ post.date|date('c') }}">
+            {{ post.date|date('j. M') }}
+          </time>
+          <a href="{{ post.link }}">
+            <img class="thumbnail" src="{{ post.thumbnail }}">
+          </a>
+          <a href="{{ post.link }}" class="post-link"><p>{{ post.title }}</p></a>
+        </article>
+      {% endfor %}
+    </div>
     {% else %}
       <p class="posts-empty">{{ __('No post found.', 'flynt') }}</p>
     {% endif %}
+
     {% set pagination = posts.pagination %}
     {% if pagination.pages %}
       {% include 'Partials/_pagination.twig' %}

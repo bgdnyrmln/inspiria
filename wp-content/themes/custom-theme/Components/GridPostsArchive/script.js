@@ -33,8 +33,9 @@ export default function (el) {
       }
 
       target.classList.remove('button--disabled')
-    } catch (e) {
-      console.error(e)
+    } catch (err) {
+      console.error(err)
+      target.classList.remove('button--disabled')
     }
   }
 

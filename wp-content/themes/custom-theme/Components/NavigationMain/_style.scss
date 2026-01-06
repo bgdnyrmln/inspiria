@@ -11,6 +11,7 @@
   color: var(--color-text);
   font-size: var(--font-size-body);
   z-index: 10;
+  box-shadow: none;
 
 
 
@@ -44,12 +45,12 @@
 
 flynt-component[name='NavigationMain']{
   width: 100%;
-  max-width: 144rem;
-  margin: 0 auto;
   --navigation-height: 13rem;
   color: var(--color-text);
   font-size: var(--font-size-body);
   z-index: 10;
+
+  box-shadow: 0 0 4rem 0 #f5f5f5;
 
 
 
@@ -58,6 +59,8 @@ flynt-component[name='NavigationMain']{
   }
 
   .navigation {
+    max-width: 144rem;
+    margin: 0 auto;
     transition: all 0.3s ease-in-out;
     display: flex;
     align-items: center;
