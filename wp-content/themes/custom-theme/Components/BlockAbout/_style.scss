@@ -1,92 +1,94 @@
 flynt-component[name='BlockAbout'] {
-  position: relative;
-  background-color: #10001D;
-  overflow: hidden;
+  background-color: #10001d;
   background-size: cover;
+  overflow: hidden;
+  position: relative;
 
   .about-container {
-    max-width: 144rem;
-    margin: 0 auto;
+    margin-block: 0;
+    margin-inline: auto;
+    max-inline-size: 144rem;
   }
 
-  .about-title{
-    margin-top: 14.1rem;
+  .about-title {
+    block-size: 38rem;
+    inline-size: 95rem;
+    margin-block-start: 14.1rem;
+    margin-inline: auto;
     text-align: center;
-    width: 95rem;
-    height: 38rem;
-    margin-left: auto;
-    margin-right: auto;
   }
 
   h1 {
-    font-size: 1.5rem;
-    text-transform: uppercase;
     color: var(--color-secondary);
+    font-size: 1.5rem;
     font-weight: 500;
     letter-spacing: 0.01rem;
+    text-transform: uppercase;
   }
 
   h2 {
     font-size: 3rem;
     font-weight: 300;
-    margin-top: 3rem;
     line-height: 3.8rem;
+    margin-block-start: 3rem;
   }
 
   p {
-    margin-top:11rem;
-    width: 45rem;
-    margin-left: 12.8rem;
-    line-height: 1.9rem;
+    inline-size: 45rem;
     letter-spacing: 0.012rem;
+    line-height: 1.9rem;
     line-height: 2.1rem;
+    margin-block-start: 11rem;
+    margin-inline-start: 12.8rem;
   }
 
   .bubble {
-    width: 12.2rem;
-    height: 12.2rem;
+    align-items: center;
+    block-size: 12.2rem;
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 50%;
-    color: white;
+    color: #fff;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     font-size: 1.4rem;
+    inline-size: 12.2rem;
+    inset-block-start: -5.2rem;
+    inset-inline-end: 8rem;
+    justify-content: center;
     letter-spacing: 0.02rem;
     position: absolute;
-    top: -5.2rem;
-    right: 8rem;
+    text-align: center;
   }
 
-  .about-content{
-    display: flex;
+  .about-content {
     align-items: center;
+    display: flex;
     justify-content: space-between;
-    margin: 0 auto;
-    padding: 0 8rem;
+    margin-block: 0;
+    margin-inline: auto;
+    padding-block: 0;
+    padding-inline: 8rem;
   }
 
-  .about-image{
+  .about-image {
     inline-size: 60.2rem;
   }
 
-  .about-description{
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    height: 34.5rem;
-    width: 67.8rem;
+  .about-description {
+    block-size: 34.5rem;
+    border-block-start: 1px solid rgba(255, 255, 255, 0.2);
+    inline-size: 67.8rem;
   }
 }
 
 /* NOISE OVERLAY */
 flynt-component[name='BlockAbout']::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url("https://grainy-gradients.vercel.app/noise.svg") repeat;
+  background: url('https://grainy-gradients.vercel.app/noise.svg') repeat;
   background-size: 50%;
-  opacity: 0.1; 
+  content: '';
+  inset: 0;
+  opacity: 0.1;
   pointer-events: none;
+  position: absolute;
   z-index: 0;
 }
 

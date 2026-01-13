@@ -1,48 +1,49 @@
-.wrapper{
-    max-width: 144rem;
-    color: #A4A6A8;
-
+.wrapper {
+  color: #a4a6a8;
+  max-inline-size: 144rem;
 }
 
-#pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 9rem 0 7.4rem 1rem;
-    margin: auto;
-
-}
-#pagination a, #pagination i {
-    font-size: 1.4rem;
-    text-decoration: none;
-    color: #A4A6A8;
-    padding: 1rem 0.9rem;
-  }
-
-#pagination a {
-    background-color: transparent;
-    
+.pagination {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding-block: 9rem 7.4rem;
+  padding-inline: 1rem 0;
 }
 
-.active{
-    color: #000000;
-    background-color: #D5D8FF;
-    border-radius: 100rem;
-    width: 2.8rem;
-    height: 2.8rem; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.pagination a,
+.pagination i {
+  color: #a4a6a8;
+  font-size: 1.4rem;
+  padding-block: 1rem;
+  padding-inline: 0.9rem;
+  text-decoration: none;
 }
 
-.disabled{
-    opacity: 0.5;
+.pagination a {
+  background-color: transparent;
 }
 
-#pagination a svg {
-    margin-right: 1rem;
+.active {
+  align-items: center;
+  background-color: #d5d8ff;
+  block-size: 2.8rem;
+  border-radius: 100rem;
+  color: #000;
+  display: flex;
+  inline-size: 2.8rem;
+  justify-content: center;
 }
 
-#pagination a:last-child svg {
-    margin-left: 0.8rem;
+.disabled {
+  opacity: 0.5;
+}
+
+.pagination a svg {
+  margin-inline-end: 1rem;
+}
+
+.pagination a:last-child svg {
+  margin-inline-start: 0.8rem;
 }

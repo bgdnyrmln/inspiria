@@ -1,74 +1,77 @@
-flynt-component[name="ContactForm"] {
+flynt-component[name='ContactForm'] {
   font-size: 1.4rem;
-  margin: 0 auto;
+  margin-block: 0;
+  margin-inline: auto;
 
 
-  .contact-form{
-    padding: 7.9rem 0 0 7rem;
+  .contact-form {
+    padding-block: 7.9rem 0;
+    padding-inline: 7rem 0;
   }
 
-  .form-group{
-    padding: 1.1rem 0 0 0;
-    width: 50rem;
+  .form-group {
+    inline-size: 50rem;
+    padding-block: 1.1rem 0;
+    padding-inline: 0;
   }
 
-  .contact-form-input{
-    width: 21.6rem;
-    height: 4.1rem;
-    border: none;
-    border-bottom: 1px solid rgba(#ffffff, 0.2);
+  .contact-form-input {
     background-color: transparent;
-    color: #ffffff;
-    margin-bottom: 1rem;
-    margin-right: 1.7rem;
-    padding: 1.5rem;
+    block-size: 4.1rem;
+    border: 0;
+    border-block-end: 1px solid rgba(#fff, 0.2);
+    color: #fff;
+    inline-size: 21.6rem;
     letter-spacing: -0.015rem;
+    margin-block-end: 1rem;
+    margin-inline-end: 1.7rem;
+    padding: 1.5rem;
   }
 
-  .contact-form-input::placeholder{
-    color: rgba(#ffffff, 0.8);
+  .contact-form-input::placeholder {
+    color: rgba(#fff, 0.8);
   }
 
-  .contact-form-input:focus{
+  .contact-form-input:focus {
+    border-block-end: 1px solid rgba(#fff, 0.4);
     outline: none;
-    border-bottom: 1px solid rgba(#ffffff, 0.4);
   }
 
 
-  .contact-form-textarea:focus{
+  .contact-form-textarea:focus {
+    border-block-end: 1px solid rgba(#fff, 0.4);
     outline: none;
-    border-bottom: 1px solid rgba(#ffffff, 0.4);
   }
 
   .contact-form-textarea {
-    padding-top: 1rem;
-    padding-left: 1.5rem;
-    width: 45.2rem;
-    padding-bottom:10.3rem;
-    line-height: 1.4;
     background-color: transparent;
-    color: #ffffff;
-    border: none;
-    border-bottom: 1px solid rgba(#ffffff, 0.2);
+    border: 0;
+    border-block-end: 1px solid rgba(#fff, 0.2);
+    color: #fff;
+    inline-size: 45.2rem;
     letter-spacing: -0.015rem;
+    line-height: 1.4;
+    padding-block: 1rem 10.3rem;
+    padding-inline-start: 1.5rem;
     resize: none;
   }
 
 
-  .contact-form-textarea::placeholder{
-    color: rgba(#ffffff, 0.8);
+  .contact-form-textarea::placeholder {
+    color: rgba(#fff, 0.8);
   }
 
 
-  .button-submit{
-    display: flex;
+  .button-submit {
     align-items: center;
-    border: none;
+    border: 0;
     color: var(--color-secondary);
-    font-size: 1.5rem;
     cursor: pointer;
-    margin: 2rem 0 0 31.7rem;   
-    gap: 1.6rem; 
+    display: flex;
+    font-size: 1.5rem;
+    gap: 1.6rem;
+    margin-block: 2rem 0;
+    margin-inline: 31.7rem 0;
     transition: all 0.3s ease;
 
     &:hover {

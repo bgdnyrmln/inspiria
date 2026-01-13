@@ -1,34 +1,36 @@
 
-flynt-component[name='NavigationTop']{
+flynt-component[name='NavigationTop'] {
   display: none;
 }
 
 .home flynt-component[name='NavigationTop'] {
-  display: block;
-  background-color: #0F0F0F;
+  background-color: #0f0f0f;
   color: var(--color-text-inverse);
+  display: block;
   font-family: var(--font-family-body);
   font-size: var(--font-size-small);
 
-  .banner-top{
-    margin: auto;
-    display: flex;
+  .banner-top {
     align-items: center;
-    justify-content: space-between;
-    padding: 0 8rem;
-    height: 4rem; 
+    block-size: 4rem;
+    display: flex;
     font-size: 1.4rem;
     font-weight: 400;
-    max-width: 144rem;
+    justify-content: space-between;
+    margin: auto;
+    max-inline-size: 144rem;
+    padding-block: 0;
+    padding-inline: 8rem;
   }
 
-  .link{
-    color: #D5D8FF;
-    text-decoration: none;
-    display: flex;
+  .link {
     align-items: center;
+    color: #d5d8ff;
+    display: flex;
     gap: 1.6rem;
+    text-decoration: none;
     transition: all 0.3s ease;
+
     &:hover {
       opacity: 0.8;
     }

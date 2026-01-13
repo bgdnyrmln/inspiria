@@ -1,64 +1,65 @@
 flynt-component[name='GridPostsArchive'] {
-  .posts-header{
-    display: flex;
-    justify-content: space-between;
-    color: #10001D;
+  .posts-header {
     align-items: center;
-    margin-top: 6rem;
-    margin-left: -2rem;
-    width: 128rem;
-    border-bottom: 1px solid rgba($color: #210A00, $alpha: 0.1);
-    padding-bottom: 3.1rem;
+    border-block-end: 1px solid rgba($color: #210a00, $alpha: 0.1);
+    color: #10001d;
+    display: flex;
+    inline-size: 128rem;
+    justify-content: space-between;
+    margin-block-start: 6rem;
+    margin-inline-start: -2rem;
+    padding-block-end: 3.1rem;
 
-    h2{
+    h2 {
       font-size: 4.5rem;
       font-weight: 800;
-      margin-right: 2.4rem;
-      width: 50rem;
+      inline-size: 50rem;
       line-height: 5.6rem;
+      margin-inline-end: 2.4rem;
     }
 
-    p{
-      width: 40rem;
+    p {
       font-size: 1.5rem;
       font-weight: 300;
-      line-height: 1.9rem;
+      inline-size: 40rem;
       letter-spacing: 0.012rem;
-      margin-right: 0.2rem;
+      line-height: 1.9rem;
+      margin-inline-end: 0.2rem;
     }
   }
 
   .news-list {
-    position: relative;
+    column-gap: 2.1rem;
     display: grid;
     grid-template-columns: repeat(4, 30.4rem);
-    column-gap: 2.1rem;
+    margin-block-start: 6rem;
+    margin-inline-start: -2rem;
+    position: relative;
     row-gap: 5rem;
-    margin-top: 6rem;
-    margin-left: -2rem;
   }
 
   .news-list .date {
-    position: absolute;
+    background-color: #000;
+    border-radius: 0.5rem 0;
+    color: #fff;
     font-size: 1.4rem;
     font-weight: 500;
-    background-color: #000000;
-    color: #FFFFFF;
-    padding: 0.8rem 0.8rem 1rem 1rem;
-    border-radius: 0.5rem 0rem 0.5rem 0rem;
     letter-spacing: 0.03rem;
+    padding-block: 0.8rem 1rem;
+    padding-inline: 1rem 0.8rem;
+    position: absolute;
     z-index: 2;
   }
 
   .news-list .news-item {
-    width: 30.4rem;
+    inline-size: 30.4rem;
   }
   
   .thumbnail {
-    width: 30.4rem;
-    height: 37.5rem;
+    block-size: 37.5rem;
     border-radius: 0.5rem;
-    margin-bottom: 1.6rem;
+    inline-size: 30.4rem;
+    margin-block-end: 1.6rem;
     transition: all 0.3s ease;
 
     &:hover {
@@ -69,10 +70,11 @@ flynt-component[name='GridPostsArchive'] {
   .post-link {
     font-size: 1.5rem;
     text-decoration: none;
-    p{
-      width: 28.4rem;
-      line-height: 1.9rem;
+
+    p {
       font-weight: 500;
+      inline-size: 28.4rem;
+      line-height: 1.9rem;
       transition: all 0.3s ease;
     }
 

@@ -1,78 +1,82 @@
 flynt-component[name='BlockReviews'] {
   background-color: #090010;
-  height: 57.6rem;  
+  block-size: 57.6rem;
 
-  .reviews-wrapper{
-    max-width: 144rem;
-    margin: 0 auto;
+  .reviews-wrapper {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    margin-block: 0;
+    margin-inline: auto;
+    max-inline-size: 144rem;
     text-align: center;
 
-    h1{
+    h1 {
       font-size: 2rem;
       font-weight: 700;
-      margin-top: 2.7rem;
-      margin-right: 1.6rem;
+      margin-block-start: 2.7rem;
+      margin-inline-end: 1.6rem;
     }
   }
 
 
-  .reviews-container{
+  .reviews-container {
     display: flex;
-    justify-content: center;
-    margin-top: 4.6rem;
     gap: 2.2rem;
+    justify-content: center;
+    margin-block-start: 4.6rem;
   }
 
   .review-item {
-    background-color: #10001D;
-    text-align: left;
-    width: 63rem;
-    height: fit-content;
-    padding: 4rem 3.4rem 2rem 3.4rem;
+    background-color: #10001d;
+    block-size: fit-content;
     border-radius: 1rem;
+    inline-size: 63rem;
+    padding-block: 4rem 2rem;
+    padding-inline: 3.4rem;
+    text-align: start;
 
-    .review-top{
+    .review-top {
       display: flex;
       justify-content: space-between;
      
-      .review-name{
-        display: flex;
+      .review-name {
         align-items: center;
+        display: flex;
         font-size: 2rem;
         font-weight: 700;
         gap: 1.1rem;
       }
 
-      .review-place{
-        display: flex;  
-        gap: 0.56rem;
-        margin-top: 0.5rem;
-        margin-right: 0.2rem;
+      .review-place {
+        display: flex;
         font-size: 1.4rem;
         font-weight: 700;
+        gap: 0.56rem;
+        margin-block-start: 0.5rem;
+        margin-inline-end: 0.2rem;
       }
     }
-    .review-text{
-      margin-top: 2rem;
+
+    .review-text {
       font-size: 1.4rem;
-      width: 56rem;
+      inline-size: 56rem;
+      margin-block-start: 2rem;
     }
 
 
-    .review-comment{
+    .review-comment {
       background-color: rgba(213, 216, 255, 0.1);
-      color: #D5D8FF;
+      border-radius: 1rem;
+      color: #d5d8ff;
       font-size: 1.5rem;
       font-weight: 400;
-      border-radius: 1rem;
-      width: 58rem;
-      padding: 1.6rem 1.6rem;
+      inline-size: 58rem;
       line-height: 2.1rem;
-      margin-top: 3rem;
-      margin-left: -0.9rem;
+      margin-block-start: 3rem;
+      margin-inline-start: -0.9rem;
+      padding-block: 1.6rem;
+      padding-inline: 1.6rem;
 
     }
   }

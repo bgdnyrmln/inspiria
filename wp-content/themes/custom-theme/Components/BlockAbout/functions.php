@@ -36,7 +36,7 @@ function getACFLayout()
                     'label' => 'Image',
                     'name' => 'image',
                     'type' => 'image',
-                ], 
+                ],
           ],
     ];
 }

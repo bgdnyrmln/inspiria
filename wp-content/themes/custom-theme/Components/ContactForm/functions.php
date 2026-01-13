@@ -61,13 +61,13 @@ Options::addTranslatable('ContactForm', [
                         'type' => 'true_false',
                         'ui' => 1,
                     ]
+                ],
             ],
-        ],
-        [
+            [
             'label' => 'Submit Button Text',
             'name' => 'submitButtonText',
             'type' => 'text',
-        ],
+            ],
         ],
     ],
 ]);

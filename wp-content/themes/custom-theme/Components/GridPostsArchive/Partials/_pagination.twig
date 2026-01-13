@@ -1,13 +1,14 @@
 <div class="wrapper">
-    <div id="pagination" 
-         data-current="{{ pagination.current }}" 
-         data-total="{{ pagination.total }}">
-    </div>
+  <div
+    class="pagination"
+    data-current="{{ pagination.current }}"
+    data-total="{{ pagination.total }}">
+  </div>
 </div>
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-    var el = document.getElementById('pagination');
+    var el = document.querySelector('.pagination');
 
     var Pagination = {
         current: parseInt(el.dataset.current, 10),
@@ -35,7 +36,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // MIDDLE PAGES
             var endMiddle = Math.min(size - 1, page + 3);
-            for (var i = startMiddle; i <= endMiddle; i++) html += this.pageLink(i);
+            for (var i = startMiddle; i <= endMiddle; i++) {
+                html += this.pageLink(i);
+            }
 
             // RIGHT ELLIPSIS
             if (endMiddle < size - 1) html += '<span class="ellipsis">…</span>';
@@ -54,14 +57,19 @@ document.addEventListener('DOMContentLoaded', function () {
         },
 
         pageLink: function (p) {
-            if (p === this.current) return '<span class="active">' + p + '</span>';
+            if (p === this.current) {
+                return '<span class="active">' + p + '</span>';
+            }
             return '<a href="' + this.pageUrl(p) + '" data-page="' + p + '">' + p + '</a>';
         },
 
         pageUrl: function (p) {
             var url = new URL(window.location.href);
-            if (p === 1) url.searchParams.delete('paged');
-            else url.searchParams.set('paged', p);
+            if (p === 1) {
+                url.searchParams.delete('paged');
+            } else {
+                url.searchParams.set('paged', p);
+            }
             return url.toString();
         }
     };

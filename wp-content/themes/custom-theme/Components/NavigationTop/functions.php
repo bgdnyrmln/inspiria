@@ -6,7 +6,6 @@ use Flynt\Utils\Options;
 use Timber\Timber;
 use Flynt\Utils\Asset;
 
-
 add_filter('Flynt/addComponentData?name=NavigationTop', function (array $data): array {
     return $data;
 });

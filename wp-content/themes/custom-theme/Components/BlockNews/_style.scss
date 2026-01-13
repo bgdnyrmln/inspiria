@@ -1,111 +1,108 @@
-flynt-component[name='BlockNews']{
+flynt-component[name='BlockNews'] {
   background-color: #f3f2f3;
+}
 
+flynt-component[name='BlockNews'] .news-container {
+  block-size: 66.9rem;
+  display: flex;
+  margin-block: 0;
+  margin-inline: auto;
+  max-inline-size: 144rem;
+}
 
-  .news-container{
-    max-width: 144rem;
-    margin: 0 auto;
-    display: flex;
-    height: 66.9rem;
+flynt-component[name='BlockNews'] .news-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  margin-block-start: 19rem;
+  margin-inline-start: 8rem;
+}
 
-    .news-left{
-      margin-left: 8rem;
-      margin-top: 19rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1.6rem;
-    }
+flynt-component[name='BlockNews'] h2 {
+  color: #10001d;
+  font-size: 4.5rem;
+  font-weight: 700;
+  inline-size: 46.6rem;
+  letter-spacing: 0.04rem;
+  line-height: 5.6rem;
+}
 
-    h2{
-      font-size: 4.5rem;
-      font-weight: 700;
-      width: 46.6rem;
-      color: #10001D;
-      letter-spacing: 0.04rem;
-      line-height: 5.6rem;
-    }
+flynt-component[name='BlockNews'] p {
+  color: #0f0f0f;
+  font-size: 1.5rem;
+  font-weight: 400;
+  inline-size: 40rem;
+  line-height: 2.3rem;
+  opacity: 0.6;
+}
 
-    p{
-      color: #0F0F0F;
-      opacity: 0.6;
-      width: 40rem;
-      font-weight: 400;
-      font-size: 1.5rem;
-      line-height: 2.3rem;
-    }
+flynt-component[name='BlockNews'] .link {
+  align-items: center;
+  display: flex;
+  font-size: 1.4rem;
+  font-weight: 600;
+  gap: 1.8rem;
+  margin-block-start: 1.9rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
 
-    .link{
-      margin-top: 1.9rem;
-      text-decoration: none;
-      font-size: 1.4rem;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      gap: 1.8rem;
-      transition: all 0.3s ease;
+flynt-component[name='BlockNews'] .link svg {
+  transition: transform 0.3s ease;
+}
 
-      svg{
-          transition: transform 0.3s ease;
-      }
+flynt-component[name='BlockNews'] .link:hover {
+  opacity: 0.7;
+}
 
-      &:hover{
-        opacity: 0.7;
+flynt-component[name='BlockNews'] .link:hover svg {
+  transform: translateX(0.6rem);
+}
 
-        svg{
-          transform: translateX(0.6rem);
-        }
-      }
-    }
+flynt-component[name='BlockNews'] .news-list {
+  display: flex;
+  gap: 2.1rem;
+  margin-block-start: 12rem;
+  margin-inline-start: 18.6rem;
+  position: relative;
+}
 
-    .news-list{
-      position: relative;  
-      display: flex;
+flynt-component[name='BlockNews'] .date {
+  background-color: #000;
+  border-radius: 0.5rem 0;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.03rem;
+  padding-block: 0.8rem 1rem;
+  padding-inline: 1rem 0.8rem;
+  position: absolute;
+  z-index: 2;
+}
 
-      margin-top: 12rem;
-      margin-left: 18.6rem;
-      gap: 2.1rem;
+flynt-component[name='BlockNews'] .news-item {
+  inline-size: 30.4rem;
+}
 
+flynt-component[name='BlockNews'] .thumbnail {
+  block-size: 37.5rem;
+  border-radius: 0.5rem;
+  inline-size: 30.4rem;
+  margin-block-end: 1.6rem;
+  transition: all 0.3s ease;
+}
 
-      .date{
-        position: absolute;
-        font-size: 1.4rem;
-        font-weight: 500;
-        background-color: #000000;
-        color: #FFFFFF;
-        padding: 0.8rem 0.8rem 1rem 1rem;
-        border-radius: 0.5rem 0rem 0.5rem 0rem;
-        letter-spacing: 0.03rem;
-        z-index: 2;
-      }
+flynt-component[name='BlockNews'] .thumbnail:hover {
+  opacity: 0.9;
+}
 
-      .news-item{
-        width: 30.4rem;
-        
-        .thumbnail{
-          width: 30.4rem;
-          height: 37.5rem;
-          border-radius: 0.5rem;
-          margin-bottom: 1.6rem;
-          transition: all 0.3s ease;
-          &:hover{
-            opacity: 0.9;
-          }
-        }
+flynt-component[name='BlockNews'] .news-item link {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
 
-        link{
-          font-size: 1.5rem;
-          text-decoration: none;
-          font-weight: 500;
-          transition: all 0.3s ease;
-
-          &:hover{
-            opacity: 0.7;
-          }
-        }
-      }
-    }
-  }
-
-
-  
+flynt-component[name='BlockNews'] .news-item link:hover {
+  opacity: 0.7;
 }

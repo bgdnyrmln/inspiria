@@ -1,100 +1,107 @@
 flynt-component[name='BlockTeam'] {  
   background-color: #090010;
-  height: 85rem;
+  block-size: 85rem;
 
-  .team-wrapper{
-    max-width: 144rem;
-    margin: 0 auto;
+  .team-wrapper {
+    margin-block: 0;
+    margin-inline: auto;
+    max-inline-size: 144rem;
   }
 
   .team-container {
-    margin: 0 auto;
-    display: flex;
     align-items: center;
-    position: relative;
+    border-block-end: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
     gap: 13rem;
-    padding-bottom: 5.4rem;
-    width: 128rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    inline-size: 128rem;
+    margin-block: 0;
+    margin-inline: auto;
+    padding-block-end: 5.4rem;
+    position: relative;
     
-    h2{
-      font-size: 1.5rem;
-      text-transform: uppercase;
+    h2 {
       color: var(--color-secondary);
+      font-size: 1.5rem;
       font-weight: 500;
-      margin-top: 13.9rem;
+      margin-block-start: 13.9rem;
+      text-transform: uppercase;
     }
 
-    h1{
+    h1 {
       font-size: 4.5rem;
       font-weight: 800;
-      width: 50rem;
-      margin-top: 14.5rem;
+      inline-size: 50rem;
+      margin-block-start: 14.5rem;
     }
 
-    p{
+    p {
       font-size: 1.5rem;
       font-weight: 300;
-      width: 52rem;
-      margin-top: 2.4rem;
-      line-height: 2.1rem;
+      inline-size: 52rem;
       letter-spacing: 0.012rem;
+      line-height: 2.1rem;
+      margin-block-start: 2.4rem;
     }
   }
 
-  .bubble{
-    width: 12.2rem;
-    height: 12.2rem;
+  .bubble {
+    align-items: center;
+    block-size: 12.2rem;
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 50%;
-    rotate: 18deg;
-    color: white;
+    color: #fff;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     font-size: 1.4rem;
+    inline-size: 12.2rem;
+    inset-block-start: 6.2rem;
+    inset-inline-end: 2.5rem;
+    justify-content: center;
     letter-spacing: 0.02rem;
     position: absolute;
-    top: 6.2rem;
-    right: 2.5rem;
+    rotate: 18deg;
+    text-align: center;
   }
 
 
-  .team-skills{
-    margin: 0 auto;
-    width: 128rem;
-    padding-top: 5.1rem;
+  .team-skills {
+    align-items: center;
     display: flex;
     gap: 11.2rem;
-    align-items: center;
+    inline-size: 128rem;
+    margin-block: 0;
+    margin-inline: auto;
+    padding-block-start: 5.1rem;
     
-    .skill-title{
+    .skill-title {
       font-size: 1.5rem;
       font-weight: 700;
-      width: 20rem;
+      inline-size: 20rem;
     }
 
-    p{
-      font-size: 1.5rem;
-      padding: 0.95rem 1.5rem;  
+    p {  
       border: 1px solid rgba(255, 255, 255, 0.2);
       border-radius: 100rem;
+      font-size: 1.5rem;
       letter-spacing: 0.01rem;
+      padding-block: 0.95rem;
+      padding-inline: 1.5rem;
       transition: all 0.3s ease;
-      &:hover{
+
+      &:hover {
         background-color: rgba(255, 255, 255, 0.1);
       }
     }
-    .skills-list{
+
+    .skills-list {
       display: flex;
       gap: 1.5rem;
     }
   }
 
-  .bottom-image{
+  .bottom-image {
     inline-size: 127.8rem;
-    padding-top: 5rem;
-    margin: 0 auto;
+    margin-block: 0;
+    margin-inline: auto;
+    padding-block-start: 5rem;
   }
 }

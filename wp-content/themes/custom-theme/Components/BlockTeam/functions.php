@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Flynt\Components\BlockTeam;
 
 add_filter('Flynt/addComponentData?name=BlockTeam', function ($data, $component) {
@@ -37,7 +36,7 @@ function getACFLayout()
                 'label' => 'Skills Group',
                 'name' => 'skillsgroup',
                 'type' => 'group',
-                'sub_fields' =>[
+                'sub_fields' => [
                     [
                         'label' => 'Skill Title',
                         'name' => 'skilltitle',

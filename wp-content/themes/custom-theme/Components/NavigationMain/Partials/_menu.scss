@@ -1,8 +1,8 @@
 .home .menu {
   align-items: center;
   display: flex;
-  list-style: none;
   gap: 4.1rem;
+  list-style: none;
 
 
   .link {
@@ -10,6 +10,7 @@
     letter-spacing: 0.01rem;
     text-decoration: none;
     transition: color 0.2s ease-in-out;
+
     &:hover {
       color: var(--color-secondary);
     }
@@ -72,17 +73,18 @@
 .menu {
   align-items: center;
   display: flex;
-  list-style: none;
   gap: 4.1rem;
-  margin-right: 0.4rem;
+  list-style: none;
+  margin-inline-end: 0.4rem;
 
 
 
   .link {
-    color: #10001D;
+    color: #10001d;
     letter-spacing: 0.01rem;
     text-decoration: none;
     transition: color 0.2s ease-in-out;
+
     &:hover {
       color: var(--color-secondary);
     }

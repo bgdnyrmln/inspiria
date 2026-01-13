@@ -41,9 +41,6 @@ Thumbs.db
 # ignore composer packages
 vendor/
 
-# ignore dist
-dist/
-
 # -------------------------
 # BEGIN Whitelisted Files
 # -------------------------
