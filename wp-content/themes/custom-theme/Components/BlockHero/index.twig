@@ -38,7 +38,7 @@
       </div>
     </div>
     <div class="hero-arrow">
-      <button id="scroll-down-button">
+      <button id="scroll-down-button" data-ref="scroll-down-button">
         <svg width="34" height="96" viewBox="0 0 34 96" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0_114_58)">
           <path d="M17.9999 8.5L17.9999 7.5L15.9999 7.5L15.9999 8.5L16.9999 8.5L17.9999 8.5ZM15.9999 86.6368C15.9999 87.1891 16.4476 87.6368 16.9999 87.6368C17.5522 87.6368 17.9999 87.1891 17.9999 86.6368L16.9999 86.6368L15.9999 86.6368ZM16.9999 8.5L15.9999 8.5L15.9999 86.6368L16.9999 86.6368L17.9999 86.6368L17.9999 8.5L16.9999 8.5Z" fill="white"/>
@@ -54,15 +54,3 @@
     </div>
   </div>
 </flynt-component>
-
-
-
-<script>
-  document.getElementById('scroll-down-button').addEventListener('click', function() {
-    window.scrollBy({
-      top: 72.4 * parseFloat(getComputedStyle(document.documentElement).fontSize) - document.documentElement.scrollTop,
-      left: 0,
-      behavior: 'smooth'
-    });
-  });
-</script>

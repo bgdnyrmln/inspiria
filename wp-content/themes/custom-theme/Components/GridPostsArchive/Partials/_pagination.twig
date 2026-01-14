@@ -1,79 +1,8 @@
 <div class="wrapper">
   <div
     class="pagination"
+    data-ref="pagination"
     data-current="{{ pagination.current }}"
     data-total="{{ pagination.total }}">
   </div>
 </div>
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    var el = document.querySelector('.pagination');
-
-    var Pagination = {
-        current: parseInt(el.dataset.current, 10),
-        total: parseInt(el.dataset.total, 10),
-        el: el,
-
-        render: function () {
-            var html = '';
-            var page = this.current;
-            var size = this.total;
-
-            // PREV
-            if (page > 1) {
-                html += '<a href="' + this.pageUrl(page - 1) + '" data-page="' + (page - 1) + '"><svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.45972 0.919189L0.459716 4.91919L4.45972 8.91919" stroke="#10001D" stroke-width="1.3" stroke-linecap="square" stroke-linejoin="bevel"/></svg></a>';
-            } else {
-                html += '<a class="disabled"><svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.45972 0.919189L0.459716 4.91919L4.45972 8.91919" stroke="#10001D" stroke-width="1.3" stroke-linecap="square" stroke-linejoin="bevel"/></svg></a>';
-            }
-
-            // FIRST PAGE
-            html += this.pageLink(1);
-
-            // LEFT ELLIPSIS
-            var startMiddle = Math.max(2, page - 3);
-            if (startMiddle > 2) html += '<span class="ellipsis">…</span>';
-
-            // MIDDLE PAGES
-            var endMiddle = Math.min(size - 1, page + 3);
-            for (var i = startMiddle; i <= endMiddle; i++) {
-                html += this.pageLink(i);
-            }
-
-            // RIGHT ELLIPSIS
-            if (endMiddle < size - 1) html += '<span class="ellipsis">…</span>';
-
-            // LAST PAGE
-            if (size > 1) html += this.pageLink(size);
-
-            // NEXT
-            if (page < size) {
-                html += '<a href="' + this.pageUrl(page + 1) + '" data-page="' + (page + 1) + '"><svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.919189 8.91919L4.91919 4.91919L0.919189 0.919189" stroke="#10001D" stroke-width="1.3" stroke-linecap="square" stroke-linejoin="bevel"/></svg></a>';
-            } else {
-                html += '<a class="disabled"><svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.919189 8.91919L4.91919 4.91919L0.919189 0.919189" stroke="#10001D" stroke-width="1.3" stroke-linecap="square" stroke-linejoin="bevel"/></svg></a>';
-            }
-
-            this.el.innerHTML = html;
-        },
-
-        pageLink: function (p) {
-            if (p === this.current) {
-                return '<span class="active">' + p + '</span>';
-            }
-            return '<a href="' + this.pageUrl(p) + '" data-page="' + p + '">' + p + '</a>';
-        },
-
-        pageUrl: function (p) {
-            var url = new URL(window.location.href);
-            if (p === 1) {
-                url.searchParams.delete('paged');
-            } else {
-                url.searchParams.set('paged', p);
-            }
-            return url.toString();
-        }
-    };
-
-    Pagination.render();
-});
-</script>
