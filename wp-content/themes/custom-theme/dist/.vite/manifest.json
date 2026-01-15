@@ -128,10 +128,6 @@
     "file": "assets/image copy 12-lfZN6Uv3.png",
     "src": "assets/images/image copy 12.png"
   },
-  "assets/images/image copy 13.png": {
-    "file": "assets/image copy 13-BQAc3ygt.png",
-    "src": "assets/images/image copy 13.png"
-  },
   "assets/images/image copy 7.png": {
     "file": "assets/image copy 7-Cld3IBFI.png",
     "src": "assets/images/image copy 7.png"
@@ -145,7 +141,7 @@
     "src": "assets/images/image copy 9.png"
   },
   "assets/images/image copy.png": {
-    "file": "assets/image copy-C6qQos1K.png",
+    "file": "assets/image copy-Sii5HpTG.png",
     "src": "assets/images/image copy.png"
   },
   "assets/images/logo-dev.svg": {
@@ -177,7 +173,7 @@
     ]
   },
   "assets/main.scss": {
-    "file": "assets/main-DoVa0Jb_.css",
+    "file": "assets/main-CDMSpkD1.css",
     "src": "assets/main.scss",
     "isEntry": true,
     "name": "main",
