@@ -4,5 +4,4 @@
   {% for component in post.meta('pageComponents') %}
     {{ renderComponent(component) }}
   {% endfor %}
-  {{ renderComponent('GridPostsArchive', {posts: posts}) }}
 {% endblock %}

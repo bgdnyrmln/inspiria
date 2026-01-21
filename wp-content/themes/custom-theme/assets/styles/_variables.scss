@@ -2,7 +2,7 @@
 [data-theme='reset'] {
   --color-accent: #10001d;
   --color-secondary: #d5d8ff;
-  --color-text: #fff;
+  --color-text: #000;
 
   // Cookie notice
   --cc-text: var(--color-text);
@@ -16,8 +16,7 @@ $container-spacing: 2rem; // Container padding
 
 :root {
   // View _fonts.scss for available font families
-  --font-family-heading: 'Geologica Variable', sans-serif;
-  --font-family-text: 'Geologica Variable', sans-serif;
+  --font-family-text: 'Geologica Variable';
   --font-size-body: 1.5rem;
 
   // These are different for each project, adjust to your needs

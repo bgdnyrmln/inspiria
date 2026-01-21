@@ -35,6 +35,7 @@ add_action('Flynt/afterRegisterComponents', function (): void {
                     Components\BlockReviews\getACFLayout(),
                     Components\BlockNews\getACFLayout(),
                     Components\GridPostsArchive\getACFLayout(),
+                    Components\BlockEventGrid\getACFLayout(),
                     // Add components here
                 ],
             ],

@@ -3,7 +3,6 @@
 namespace Flynt\Components\GridPostsArchive;
 
 use Timber\Timber;
-use Timber\PostQuery;
 
 add_filter('Flynt/addComponentData?name=GridPostsArchive', function (array $data): array {
     $paged = get_query_var('paged') ?: 1;

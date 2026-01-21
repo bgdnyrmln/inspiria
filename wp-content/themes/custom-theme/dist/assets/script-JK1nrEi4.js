@@ -1,1 +1,0 @@
-import{b as e}from"./helpers-CJiaW3rk.js";function l(o){const t=e(o);if(t["scroll-down-button"])return t["scroll-down-button"].addEventListener("click",function(){window.scrollBy({top:72.4*parseFloat(getComputedStyle(document.documentElement).fontSize)-document.documentElement.scrollTop,left:0,behavior:"smooth"})}),()=>{}}export{l as default};

@@ -1,0 +1,30 @@
+<flynt-component name="BlockPostHeader" {{ not post.thumbnail ? 'data-thumbnail="false"' }}>
+  <div class="container">
+    <div class="wrapper">
+      <div>
+        <div class="navigation">
+          <a href="/wordpress/index.php/jaunumi/" class="back">
+            <img src="/wordpress/wp-content/themes/custom-theme/assets/images/back.png" class="back-icon"/>
+            atgriezties
+          </a>
+          <ul class="social">
+            <li><a href="" class="x"></a></li>
+            <li><a href="" class="linkedin"></a></li>
+            <li><a href="" class="facebook"></a></li>
+            <li><a href="#" class="copy">Copy</a></li>
+          </ul>
+        </div>
+        {% if post.thumbnail %}
+          <img class="lazyload" src="{{ post.thumbnail.src }}"/>
+        {% endif %}
+      </div>
+      <div class="content">
+        <div class="date">{{ post.date|date('j.m.Y') }}</div>
+        <div class="wrap">
+          <h1>{{ post.title }}</h1>
+        </div>
+        {{ text }}
+      </div>
+    </div>
+  </div>
+</flynt-component>

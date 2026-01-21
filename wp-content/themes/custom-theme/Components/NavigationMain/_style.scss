@@ -1,8 +1,9 @@
 
 .home flynt-component[name='NavigationMain'] {
+
   background-color: transparent;
   box-shadow: none;
-  color: var(--color-text);
+  color: #fff;
   font-size: var(--font-size-body);
   inline-size: 100%;
   inset-inline: 0;
@@ -34,7 +35,7 @@
     border: 1px solid #fff;
     color: #fff;
     inline-size: 15.6rem;
-    margin-inline: -12rem 1.5rem;
+    margin-inline: 0 1.5rem;
     transition: all 0.3s ease;
 
     &:hover {
@@ -73,15 +74,14 @@ flynt-component[name='NavigationMain'] {
   }
 
   .button {
-    background-color: var(--color-secondary);
+    background-color: #10001d;
     border: 0;
-    color: #10001d;
-    inline-size: 15.5rem;
-    margin-inline: -13rem 2.8rem;
+    color: #fff;
+    margin-inline-end: 1.6rem;
     transition: all 0.3s ease;
 
     &:hover {
-      background-color: #b3b8fb;
+      opacity: 0.9;
     }
   }
 }

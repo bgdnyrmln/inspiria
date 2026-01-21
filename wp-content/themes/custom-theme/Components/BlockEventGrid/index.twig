@@ -1,0 +1,59 @@
+<flynt-component name="BlockEventGrid">
+  <div class = "wrapper">
+    <div class = "heading">
+      <h1 class = "title">{{ title.text }}</h1>
+      <p class = "subtitle">{{ title.subtext }}</p>
+    </div>
+    <div class="grid">
+    {% for event in events %}
+      <article class="event-card">
+        <p class="event-date">
+          {{ event.date|date('d. M. Y') }}
+        </p>
+        {% if event.thumbnail %}
+          <img src="{{ event.thumbnail.src('medium') }}" alt="{{ event.title }}" class="event-thumbnail"/>
+        {% endif %}
+        <h3 class = "event-title">{{ event.title }}</h3>
+        <p class = "event-description">{{ event.small_description }}</p>
+        <a href="#" class="event-button">
+          <span class="event-button__text">{{ buttonText }}</span>
+
+          <span class="event-button__icon">
+            <span class="icon icon--default">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="32" height="32" rx="16" fill="#10001D"/>
+                <path d="M12.3999 19.6L19.5995 12.4004" stroke="#D5D8FF" stroke-width="1.45455" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12.4009 12.4H19.6005V19.5996" stroke="#D5D8FF" stroke-width="1.45455" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+
+            <span class="icon icon--hover">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="32" height="32" rx="16" fill="#D5D8FF"/>
+                <path d="M10.9087 15.9998H21.0905" stroke="#10001D" stroke-width="1.45455" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16.0005 10.9091L21.0914 16L16.0005 21.0909" stroke="#10001D" stroke-width="1.45455" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </span>
+        </a>
+      </article>
+    {% endfor %}
+    {% if events|length <= 2 %}
+      <article class="event-card">
+        <div class="info-box">
+          <h1>{{ info.title }}</h1>
+          <p>{{ info.description }}</p>
+        </div>
+          <svg width="416" height="470" viewBox="0 0 416 470" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="416" height="470" fill="#D5D8FF" fill-opacity="0.2"/>
+            <circle cx="332" r="42.5" stroke="#10001D" stroke-opacity="0.1"/>
+            <circle cx="32" cy="452" r="60.5" stroke="#10001D" stroke-opacity="0.05"/>
+            <circle cx="303" cy="343" r="28.5" stroke="#10001D" stroke-opacity="0.1"/>
+            <circle cx="58.5" cy="123.5" r="11" stroke="#10001D" stroke-opacity="0.1"/>
+            <circle cx="265.5" cy="124" r="7.5" stroke="#10001D" stroke-opacity="0.05"/>
+          </svg>
+      </article>
+    {% endif %}
+    </div>
+  </div>
+</flynt-component>
