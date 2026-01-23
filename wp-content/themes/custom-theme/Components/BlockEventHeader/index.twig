@@ -1,9 +1,9 @@
-<flynt-component name="BlockPostHeader" {{ not post.thumbnail ? 'data-thumbnail="false"' }}>
+<flynt-component name="BlockEventHeader" {{ not post.thumbnail ? 'data-thumbnail="false"' }}>
   <div class="container">
     <div class="wrapper">
       <div>
         <div class="navigation">
-          <a href="/wordpress/index.php/jaunumi/" class="back">
+          <a href="/wordpress/index.php/pasakumi/" class="back">
             <img src="/wordpress/wp-content/themes/custom-theme/assets/images/back.png" class="back-icon"/>
             atgriezties
           </a>
@@ -15,15 +15,115 @@
           </ul>
         </div>
         {% if post.thumbnail %}
-          <img class="lazyload" src="{{ post.thumbnail.src }}"/>
+          <img class="thumbnail" src="{{ post.thumbnail.src }}"/>
         {% endif %}
       </div>
       <div class="content">
         <div class="date">{{ post.date|date('j.m.Y') }}</div>
         <div class="wrap">
-          <h1>{{ post.title }}</h1>
+          <h1 class="title">{{ post.title }}</h1>
         </div>
-        {{ text }}
+        <div class="metadata">
+          {% if post.place %}
+            <div class="metarow">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g opacity="0.6" clip-path="url(#clip0_261_2865)">
+            <path d="M17.95 12.5H14.1667C13.7246 12.5 13.3007 12.6756 12.9882 12.9882C12.6756 13.3007 12.5 13.7246 12.5 14.1667V17.95" stroke="#0F0F0F" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M5.83301 2.78345V4.16678C5.83301 4.82982 6.0964 5.46571 6.56524 5.93455C7.03408 6.40339 7.66997 6.66678 8.33301 6.66678C8.77504 6.66678 9.19896 6.84238 9.51152 7.15494C9.82408 7.4675 9.99967 7.89142 9.99967 8.33345C9.99967 9.25011 10.7497 10.0001 11.6663 10.0001C12.1084 10.0001 12.5323 9.82452 12.8449 9.51196C13.1574 9.1994 13.333 8.77547 13.333 8.33345C13.333 7.41678 14.083 6.66678 14.9997 6.66678H17.6413" stroke="#0F0F0F" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9.16634 18.2917V15C9.16634 14.558 8.99075 14.134 8.67819 13.8215C8.36562 13.5089 7.9417 13.3333 7.49967 13.3333C7.05765 13.3333 6.63372 13.1577 6.32116 12.8452C6.0086 12.5326 5.83301 12.1087 5.83301 11.6667V10.8333C5.83301 10.3913 5.65741 9.96737 5.34485 9.65481C5.03229 9.34225 4.60837 9.16666 4.16634 9.16666H1.70801" stroke="#0F0F0F" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M10.0003 18.3334C14.6027 18.3334 18.3337 14.6025 18.3337 10.0001C18.3337 5.39771 14.6027 1.66675 10.0003 1.66675C5.39795 1.66675 1.66699 5.39771 1.66699 10.0001C1.66699 14.6025 5.39795 18.3334 10.0003 18.3334Z" stroke="#0F0F0F" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_261_2865">
+            <rect width="20" height="20" fill="white"/>
+            </clipPath>
+            </defs>
+            </svg>
+            <p>{{ post.place }}</p>
+            </div>
+          {% endif %}
+          {% if post.project %}
+            <div class = "metarow">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g opacity="0.6" clip-path="url(#clip0_261_2872)">
+              <path d="M3.33301 18.3334V3.33341C3.33301 3.20404 3.36313 3.07645 3.42099 2.96074C3.47884 2.84502 3.56284 2.74437 3.66634 2.66675C4.53182 2.01764 5.58449 1.66675 6.66634 1.66675C9.16634 1.66675 10.833 3.33341 12.7772 3.33341C13.8883 3.33341 14.7402 3.11119 15.333 2.66675C15.4568 2.57389 15.604 2.51735 15.7582 2.50345C15.9123 2.48955 16.0673 2.51885 16.2057 2.58806C16.3441 2.65727 16.4605 2.76366 16.5419 2.89531C16.6232 3.02695 16.6663 3.17865 16.6663 3.33341V11.6667C16.6663 11.7961 16.6362 11.9237 16.5784 12.0394C16.5205 12.1551 16.4365 12.2558 16.333 12.3334C15.4675 12.9825 14.4149 13.3334 13.333 13.3334C10.833 13.3334 9.16634 11.6667 6.66634 11.6667C5.43644 11.6668 4.24969 12.1201 3.33301 12.9401" stroke="#0F0F0F" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_261_2872">
+              <rect width="20" height="20" fill="white"/>
+              </clipPath>
+              </defs>
+              </svg>
+              <p>{{ post.project }}</p>
+            </div>
+          {% endif %}
+          {% if post.date %}
+            <div class = "metarow">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g opacity="0.6" clip-path="url(#clip0_261_2876)">
+              <path d="M6.66699 1.66675V5.00008" stroke="#0F0F0F" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M13.333 1.66675V5.00008" stroke="#0F0F0F" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M15.8333 3.33334H4.16667C3.24619 3.33334 2.5 4.07954 2.5 5.00001V16.6667C2.5 17.5872 3.24619 18.3333 4.16667 18.3333H15.8333C16.7538 18.3333 17.5 17.5872 17.5 16.6667V5.00001C17.5 4.07954 16.7538 3.33334 15.8333 3.33334Z" stroke="#0F0F0F" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M2.5 8.33334H17.5" stroke="#0F0F0F" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M6.66699 11.6667H6.67533" stroke="#0F0F0F" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M10 11.6667H10.0083" stroke="#0F0F0F" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M13.333 11.6667H13.3413" stroke="#0F0F0F" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M6.66699 15H6.67533" stroke="#0F0F0F" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M10 15H10.0083" stroke="#0F0F0F" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M13.333 15H13.3413" stroke="#0F0F0F" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_261_2876">
+              <rect width="20" height="20" fill="white"/>
+              </clipPath>
+              </defs>
+              </svg>
+              <p>{{ post.date_start }} {{ post.date_end }}</p>
+            </div>
+          {% endif %}
+          {% if post.travel_reimbursement %}
+            <div class = "metarow">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g opacity="0.6">
+              <path d="M14.8333 16L13.3333 9.16667L16.25 6.25C17.5 5 17.9167 3.33333 17.5 2.5C16.6667 2.08333 15 2.5 13.75 3.75L10.8333 6.66667L4 5.16667C3.58333 5.08333 3.25 5.25 3.08333 5.58333L2.83333 6C2.66667 6.41667 2.75 6.83333 3.08333 7.08333L7.5 10L5.83333 12.5H3.33333L2.5 13.3333L5 15L6.66667 17.5L7.5 16.6667V14.1667L10 12.5L12.9167 16.9167C13.1667 17.25 13.5833 17.3333 14 17.1667L14.4167 17C14.75 16.75 14.9167 16.4167 14.8333 16Z" stroke="#0F0F0F" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              </svg>
+              <p>Travel Reimbursement: {{ post.travel_reimbursement }}€</p>
+            </div>
+          {% endif %}
+          {% if post.accommodation_and_meals %}
+            <div class = "metarow">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g opacity="0.6" clip-path="url(#clip0_261_2893)">
+              <path d="M7.18393 11.5C7.00861 11.3173 6.87214 11.1008 6.78276 10.8639C6.69337 10.6269 6.65293 10.3743 6.66386 10.1212C6.67479 9.8682 6.73687 9.62 6.84635 9.39162C6.95583 9.16323 7.11045 8.9594 7.30088 8.79241C7.4913 8.62542 7.71358 8.49875 7.95431 8.42002C8.19504 8.3413 8.44922 8.31216 8.70151 8.33437C8.95381 8.35658 9.19899 8.42967 9.42226 8.54923C9.64553 8.6688 9.84227 8.83236 10.0006 9.03004C10.1597 8.83442 10.3566 8.6729 10.5795 8.55513C10.8025 8.43736 11.0469 8.36578 11.2982 8.34465C11.5494 8.32352 11.8024 8.35329 12.0419 8.43217C12.2813 8.51105 12.5025 8.63742 12.692 8.80373C12.8815 8.97004 13.0355 9.17286 13.1449 9.40007C13.2542 9.62728 13.3166 9.87421 13.3283 10.1261C13.34 10.378 13.3007 10.6296 13.2129 10.866C13.1251 11.1023 12.9906 11.3186 12.8173 11.5017L10.6289 13.8817C10.5509 13.9716 10.4544 14.0437 10.3461 14.0931C10.2377 14.1425 10.1201 14.168 10.001 14.168C9.88195 14.168 9.76428 14.1425 9.65595 14.0931C9.54762 14.0437 9.45116 13.9716 9.37309 13.8817L7.18393 11.5Z" stroke="#0F0F0F" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M2.5 8.33333C2.49994 8.09088 2.55278 7.85135 2.65482 7.63142C2.75687 7.4115 2.90566 7.21649 3.09083 7.05999L8.92417 2.05999C9.22499 1.80575 9.60613 1.66626 10 1.66626C10.3939 1.66626 10.775 1.80575 11.0758 2.05999L16.9092 7.05999C17.0943 7.21649 17.2431 7.4115 17.3452 7.63142C17.4472 7.85135 17.5001 8.09088 17.5 8.33333V15.8333C17.5 16.2754 17.3244 16.6993 17.0118 17.0118C16.6993 17.3244 16.2754 17.5 15.8333 17.5H4.16667C3.72464 17.5 3.30072 17.3244 2.98816 17.0118C2.67559 16.6993 2.5 16.2754 2.5 15.8333V8.33333Z" stroke="#0F0F0F" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_261_2893">
+              <rect width="20" height="20" fill="white"/>
+              </clipPath>
+              </defs>
+              </svg>
+              <p>Accommodation & Meals: {{ post.accommodation_and_meals }}</p>
+            </div>
+          {% endif %}
+          {% if post.additional_info %}
+            <div class = "metarow">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g opacity="0.6">
+              <path d="M9.16667 5C11.7011 5.06529 14.1783 4.23959 16.1667 2.66667C16.2905 2.57381 16.4377 2.51727 16.5918 2.50337C16.746 2.48947 16.9009 2.51877 17.0393 2.58798C17.1778 2.65719 17.2942 2.76358 17.3755 2.89522C17.4569 3.02687 17.5 3.17857 17.5 3.33333V13.3333C17.5 13.4881 17.4569 13.6398 17.3755 13.7714C17.2942 13.9031 17.1778 14.0095 17.0393 14.0787C16.9009 14.1479 16.746 14.1772 16.5918 14.1633C16.4377 14.1494 16.2905 14.0929 16.1667 14C14.1783 12.4271 11.7011 11.6014 9.16667 11.6667H4.16667C3.72464 11.6667 3.30072 11.4911 2.98816 11.1785C2.67559 10.866 2.5 10.442 2.5 10V6.66667C2.5 6.22464 2.67559 5.80072 2.98816 5.48816C3.30072 5.17559 3.72464 5 4.16667 5H9.16667Z" stroke="#0F0F0F" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M5 11.6667C5 13.8304 5.70178 15.9357 7 17.6667C7.26522 18.0203 7.66005 18.2541 8.09763 18.3166C8.53522 18.3791 8.97971 18.2652 9.33333 18C9.68696 17.7348 9.92074 17.3399 9.98325 16.9024C10.0458 16.4648 9.93188 16.0203 9.66667 15.6667C8.80119 14.5127 8.33333 13.1091 8.33333 11.6667" stroke="#0F0F0F" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M6.66699 5V11.6667" stroke="#0F0F0F" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              </svg>
+              <p>{{ post.additional_info }}</p>
+            </div>
+          {% endif %}
+        </div>
+        <div class = "paragraph">
+          <p>{{ post.contacts }}</p>
+          <p>{{ text }}</p>
+        </div>
       </div>
     </div>
   </div>

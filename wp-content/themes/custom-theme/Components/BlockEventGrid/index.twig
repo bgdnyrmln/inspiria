@@ -15,7 +15,7 @@
         {% endif %}
         <h3 class = "event-title">{{ event.title }}</h3>
         <p class = "event-description">{{ event.small_description }}</p>
-        <a href="#" class="event-button">
+        <a href="{{ event.link }}" class="event-button">
           <span class="event-button__text">{{ buttonText }}</span>
 
           <span class="event-button__icon">

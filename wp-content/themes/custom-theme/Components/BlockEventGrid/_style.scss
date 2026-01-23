@@ -48,13 +48,16 @@ flynt-component[name='BlockEventGrid'] {
     box-shadow: 0 1rem 3.1rem 0 rgba(#a4a6a840, 0.25);
     inline-size: 41.6rem;
     overflow: hidden;
+    position: relative;
   }
-
 
   .event-thumbnail {
     block-size: 22rem;
-    inline-size: 41.6rem;
+    inline-size: 100%;
+    object-fit: cover;
+    object-position: center; 
   }
+
 
 
   .event-date {
@@ -90,16 +93,18 @@ flynt-component[name='BlockEventGrid'] {
   }
 
   .event-button {
+    position: absolute;
+    right: 2.8rem; 
+    bottom: 3rem;
     align-items: center;
     display: flex;
     font-size: 1.5rem;
     font-variation-settings: 'CRSV' 0;
     font-weight: 400;
     gap: 1.6rem;
-    margin-block: 3.7rem 0;
-    margin-inline: 24.9rem 0;
     text-decoration: none;
   }
+
 
   .event-button__icon {
     block-size: 3.2rem;
