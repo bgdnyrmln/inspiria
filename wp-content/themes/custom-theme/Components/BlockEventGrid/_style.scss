@@ -93,15 +93,15 @@ flynt-component[name='BlockEventGrid'] {
   }
 
   .event-button {
-    position: absolute;
-    right: 2.8rem; 
-    bottom: 3rem;
     align-items: center;
     display: flex;
     font-size: 1.5rem;
     font-variation-settings: 'CRSV' 0;
     font-weight: 400;
     gap: 1.6rem;
+    inset-block-end: 3rem;
+    inset-inline-end: 2.8rem;
+    position: absolute;
     text-decoration: none;
   }
 

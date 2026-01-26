@@ -31,9 +31,9 @@ flynt-component[name='BlockPostHeader'] {
     }
   }
 
-  .thumbnail{
-    inline-size: 47.6rem;
+  .thumbnail {
     border-radius: 0.3rem;
+    inline-size: 47.6rem;
   }
 
   .back-icon {
@@ -90,13 +90,14 @@ flynt-component[name='BlockPostHeader'] {
 
   .content {
     justify-self: flex-start;
+
     p {
       opacity: 0.6;
     }
   }
 
   .wrapper {
-    display: flex; 
+    display: flex;
     gap: 13.4rem;
   }
 
