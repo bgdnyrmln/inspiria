@@ -1,31 +1,119 @@
 flynt-component[name='BlockContacts'] {
-  padding-block-end: 7.7rem;
-  padding-block-start: 7.8rem;
+  .form{
+    width: 59.2rem;
+    height: 53.2rem;
+    background-color: #5D5E63;
+    margin-right: -2rem;
+    border-radius: 0.2rem;
+    font-variation-settings: 'CRSV' 0;
 
-  @media (max-width: $breakpoint-tablet-horizontal) {
-    padding-block-end: 3rem;
-    padding-block-start: 2rem;
+    h1{
+      font-size: 2rem;
+      font-weight: 400;
+      color: #ffff;
+      margin: 0rem 13rem 2.9rem;
+    }
+
+    .form-group{
+      margin-left: -1rem;
+    }
+
+    .contact-form-input {
+      background-color: transparent;
+      block-size: 4.1rem;
+      border: 0;
+      border-block-end: 1px solid rgba(#fff, 0.2);
+      color: #fff;
+      width: 21.6rem;
+      letter-spacing: -0.015rem;
+      margin-block-end: 2rem;
+      margin-inline-end: 1.8rem;
+      padding: 2rem 0rem 2rem 1.4rem;
+    }
+
+    .under-form{
+      padding: 0;
+      margin-left: -1rem;
+      margin-top: 0.2rem;
+    }
+
+    .contact-form-input:focus {
+      border-block-end: 1px solid rgba(#fff, 0.4);
+      background-color: #D5D8FF12;
+      padding: 2rem 0rem 2rem 0.8rem;
+      outline: none;
+    }
+
+    .contact-form-textarea {
+      block-size: 10rem;
+      padding-block: 2rem 9.8rem;
+      padding-inline-start: 1.4rem;
+    }
+
+    .contact-form-textarea:focus {
+      padding-inline-start: 0.8rem;
+      background-color: #D5D8FF12;
+    }
+
+    .button-submit {
+      display: flex;
+      justify-content: center;
+      height: 4.5rem;
+      width: 47.2rem;
+      background-color: #fff;
+      border-radius: 0.5rem;
+      font-weight: 500;
+
+      color: #10001D;
+      &:hover {
+        opacity: 0.8;
+      }
+      &::after {
+        display: none;
+      }
+    }
+    
   }
 
-  .wrap {
-    background: rgba(255, 255, 255, 0.7);
-    border-radius: 2px;
-    box-shadow: 0 4px 100px 0 rgba(0, 0, 0, 0.15);
-    inline-size: 33.9%;
-    margin-inline: auto;
-    max-inline-size: 50rem;
-    min-block-size: 61rem;
-    padding-block: 5rem;
-    padding-inline: 4.4rem;
+  .wrap{
+    padding: 8rem 0rem;
+    display: flex;
+    justify-content: space-between;
+    margin-left: -2rem;
 
-    @media (max-width: $breakpoint-tablet-horizontal) {
-      background-color: transparent;
-      inline-size: 100%;
-      margin: 0;
-      min-block-size: auto;
-      padding: 0;
+    .title{
+      padding: 5rem 0 0.8rem 0;
+      font-size: 4.5rem;
+      font-weight: 500;
+      font-variation-settings: 'CRSV' 0;
+    }
+
+    .paragraph{
+      width: 48rem;
+      font-variation-settings: 'CRSV' 0;
+      font-weight: 400;
+      margin-bottom: 5rem;
     }
   }
 
-  @import 'Partials/form';
+  .contact-info{
+    h1{
+      font-size: 2rem;
+      font-variation-settings: 'CRSV' 0;
+      font-weight: 500;
+      margin-bottom: 2.8rem;
+    }
+    h2{
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    } 
+  }
+
+  .grid{
+    display: flex;
+    flex-wrap: wrap;
+    width: 25rem;
+    gap: 2rem 5rem;
+  } 
+
 }

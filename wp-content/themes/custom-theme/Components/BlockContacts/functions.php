@@ -14,7 +14,7 @@ add_filter('Flynt/addComponentData?name=BlockContacts', function ($data) {
             'email' => __('E-pastam ir nederīgs formāts', 'flynt')
         ]
     ];
-
+    
     return $data;
 });
 
@@ -93,20 +93,36 @@ function getACFLayout()
         'label' => __('Contacts', 'flynt'),
         'sub_fields' => [
             [
-                'label' => 'Content',
-                'name' => 'contentTab',
-                'type' => 'tab',
-                'placement' => 'top',
-                'endpoint' => 0
+                'label' => 'Title',
+                'name' => 'title',
+                'type' => 'text'
             ],
             [
-                'label' => 'Content',
-                'name' => 'content',
-                'type' => 'wysiwyg',
-                'tabs' => 'visual,text',
-                'toolbar' => 'default',
-                'media_upload' => 0,
-                'delay' => 1
+                'label' => 'Paragraph',
+                'name' => 'paragraph',
+                'type' => 'textarea'
+            ],
+            [
+                'label' => 'Contacts',
+                'name' => 'contacts',
+                'type' => 'repeater',
+                'collapsed' => '',
+                'min' => 0,
+                'max' => 0,
+                'layout' => 'table',
+                'button_label' => 'Add Item',
+                'sub_fields' => [
+                    [
+                        'label' => 'Title',
+                        'name' => 'title',
+                        'type' => 'text'
+                    ],
+                    [
+                        'label' => 'Value',
+                        'name' => 'value',
+                        'type' => 'text'
+                    ]
+                ]
             ],
             [
                 'label' => 'Whatsapp',

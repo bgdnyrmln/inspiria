@@ -1,9 +1,9 @@
 flynt-component[name='NavigationFooter'] {
-  background-image: var(--footer-bg);
+  background-image: (--footer-bg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  color: var(--color-text-white);
+  color: #fff;
   font-size: var(--font-size-body-small);
   letter-spacing: -0.008rem;
   overflow: hidden;
@@ -74,7 +74,7 @@ flynt-component[name='NavigationFooter'] {
   }
 
   .left-section {
-    border-block-end: 1px solid rgba(255, 255, 255, 0.1);
+    border-block-end: 0.1rem solid rgba(255, 255, 255, 0.1);
     inline-size: 70.2rem;
   }
 
