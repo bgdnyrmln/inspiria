@@ -25,7 +25,8 @@ window.customElements.define(
 )
 
 // Author tag
-console.log('%c' + "@bgdnyrmln for GRANDEM", 'font-size:30px;')
+// TODO: Pick one animals & nature emoji to apply uniformly to every project you create.
+console.log('@bgdnyrmln')
 
 // Block gallery popup
 const images = document.querySelectorAll('.wp-block-gallery a')

@@ -1,21 +1,22 @@
 flynt-component[name='BlockContacts'] {
-  .form{
-    width: 59.2rem;
-    height: 53.2rem;
-    background-color: #5D5E63;
-    margin-right: -2rem;
+  .form {
+    background-color: #5d5e63;
+    block-size: 53.2rem;
     border-radius: 0.2rem;
     font-variation-settings: 'CRSV' 0;
+    inline-size: 59.2rem;
+    margin-inline-end: -2rem;
 
-    h1{
+    h1 {
+      color: #ffff;
       font-size: 2rem;
       font-weight: 400;
-      color: #ffff;
-      margin: 0rem 13rem 2.9rem;
+      margin-block: 0 2.9rem;
+      margin-inline: 13rem;
     }
 
-    .form-group{
-      margin-left: -1rem;
+    .form-group {
+      margin-inline-start: -1rem;
     }
 
     .contact-form-input {
@@ -24,24 +25,26 @@ flynt-component[name='BlockContacts'] {
       border: 0;
       border-block-end: 1px solid rgba(#fff, 0.2);
       color: #fff;
-      width: 21.6rem;
+      inline-size: 21.6rem;
       letter-spacing: -0.015rem;
       margin-block-end: 2rem;
       margin-inline-end: 1.8rem;
-      padding: 2rem 0rem 2rem 1.4rem;
+      padding-block: 2rem;
+      padding-inline: 1.4rem 0;
     }
 
-    .under-form{
+    .under-form {
+      margin-block-start: 0.2rem;
+      margin-inline-start: -1rem;
       padding: 0;
-      margin-left: -1rem;
-      margin-top: 0.2rem;
     }
 
     .contact-form-input:focus {
+      background-color: #d5d8ff12;
       border-block-end: 1px solid rgba(#fff, 0.4);
-      background-color: #D5D8FF12;
-      padding: 2rem 0rem 2rem 0.8rem;
       outline: none;
+      padding-block: 2rem;
+      padding-inline: 0.8rem 0;
     }
 
     .contact-form-textarea {
@@ -51,23 +54,24 @@ flynt-component[name='BlockContacts'] {
     }
 
     .contact-form-textarea:focus {
+      background-color: #d5d8ff12;
       padding-inline-start: 0.8rem;
-      background-color: #D5D8FF12;
     }
 
     .button-submit {
-      display: flex;
-      justify-content: center;
-      height: 4.5rem;
-      width: 47.2rem;
       background-color: #fff;
+      block-size: 4.5rem;
       border-radius: 0.5rem;
+      color: #10001d;
+      display: flex;
       font-weight: 500;
+      inline-size: 47.2rem;
+      justify-content: center;
 
-      color: #10001D;
       &:hover {
         opacity: 0.8;
       }
+
       &::after {
         display: none;
       }
@@ -75,60 +79,63 @@ flynt-component[name='BlockContacts'] {
     
   }
 
-  .wrap{
-    padding: 8rem 0rem;
+  .wrap {
     display: flex;
     justify-content: space-between;
-    margin-left: -2rem;
+    margin-inline-start: -2rem;
+    padding-block: 8rem;
+    padding-inline: 0;
 
-    .title{
-      padding: 5rem 0 0.8rem 0;
+    .title {
       font-size: 4.5rem;
-      font-weight: 500;
       font-variation-settings: 'CRSV' 0;
+      font-weight: 500;
+      padding-block: 5rem 0.8rem;
+      padding-inline: 0;
     }
 
-    .paragraph{
-      width: 48rem;
+    .paragraph {
       font-variation-settings: 'CRSV' 0;
       font-weight: 400;
-      margin-bottom: 5rem;
+      inline-size: 48rem;
+      margin-block-end: 5rem;
     }
   }
 
-  .contact-info{
-    h1{
+  .contact-info {
+    h1 {
       font-size: 2rem;
       font-variation-settings: 'CRSV' 0;
       font-weight: 500;
-      margin-bottom: 2.8rem;
+      margin-block-end: 2.8rem;
     }
-    h2{
+
+    h2 {
       font-size: 1.6rem;
-      margin-bottom: 1rem;
+      margin-block-end: 1rem;
     } 
   }
 
-  .grid{
+  .grid {
     display: flex;
     flex-wrap: wrap;
-    width: 25rem;
     gap: 2rem 5rem;
+    inline-size: 25rem;
   } 
 
 
-  .socials{
-    margin-top: 2rem;
+  .socials {
+    margin-block-start: 2rem;
 
-    h1{
+    h1 {
       font-size: 1.6rem;
-      font-weight: 600;
       font-variation-settings: 'CRSV' 1;
+      font-weight: 600;
     }
 
-    img{
-      margin-top: -1.5rem;
+    img {
       inline-size: 3.2rem;
+      margin-block-start: -1.5rem;
     }
   }
 

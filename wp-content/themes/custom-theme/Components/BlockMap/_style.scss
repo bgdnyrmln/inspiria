@@ -1,32 +1,35 @@
 flynt-component[name='BlockMap'] {
-  background-color: #BABABA40;
+  background-color: #bababa40;
 
-  .wrapper{
+  .wrapper {
     inline-size: 144rem;
-    padding: 8rem 8rem;
-    margin: 0 auto;
+    margin-block: 0;
+    margin-inline: auto;
+    padding-block: 8rem;
+    padding-inline: 8rem;
   }
   
-  .heading{
+  .heading {
+    align-items: center;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 0rem 0 2.4rem 0;
+    padding-block: 0 2.4rem;
+    padding-inline: 0;
 
-    h1{
+    h1 {
       font-size: 2rem;
-      font-weight: 600;
       font-variation-settings: 'CRSV' 0;
+      font-weight: 600;
     }
 
-    img{
+    img {
       inline-size: 3.6rem;
     }
   }
 
-  iframe{
-    inline-size: 140rem;
+  iframe {
     block-size: 28rem;
+    inline-size: 140rem;
   }
 
 } 

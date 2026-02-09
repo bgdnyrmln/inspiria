@@ -4,18 +4,18 @@ flynt-component[name='ContactForm'] {
   margin-inline: auto;
 
 
-  .contact-form {
-    padding-block: 6rem 0;
-    padding-inline: 7rem 0; 
+  .contact-form { 
     inline-size: 60.2rem;
+    padding-block: 6rem 0;
+    padding-inline: 7rem 0;
   }
 
-  .contact-title{
-    margin-left: 15.8rem;
-    margin-bottom: 2.8rem;
+  .contact-title {
     font-size: 1.4rem;
-    text-transform: uppercase;
     font-weight: 300;
+    margin-block-end: 2.8rem;
+    margin-inline-start: 15.8rem;
+    text-transform: uppercase;
   }
 
   .form-group {
@@ -83,70 +83,74 @@ flynt-component[name='ContactForm'] {
     gap: 1.6rem;
     margin-block: 2rem 0;
     transition: all 0.3s ease;
+
     &:hover {
       opacity: 0.8;
     }
+
     &::after {
+      background-color: #d5d8ff;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M10.909 16H21.091' stroke='%2310001D' stroke-width='1.45455' stroke-linecap='round' stroke-linejoin='round'/><path d='M16 10.909L21.091 16 16 21.091' stroke='%2310001D' stroke-width='1.45455' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+      background-position: center;
+      background-repeat: no-repeat;
+      block-size: 3.2rem;
+      border-radius: 50%;
       content: '';
       display: inline-block;
-      width: 3.2rem;
-      height: 3.2rem;
       flex-shrink: 0;
-      background-color: #D5D8FF;
-      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M10.909 16H21.091' stroke='%2310001D' stroke-width='1.45455' stroke-linecap='round' stroke-linejoin='round'/><path d='M16 10.909L21.091 16 16 21.091' stroke='%2310001D' stroke-width='1.45455' stroke-linecap='round' stroke-linejoin='round'/></svg>");
-      background-repeat: no-repeat;
-      background-position: center;
-      border-radius: 50%;
+      inline-size: 3.2rem;
     }
   }
 
 
-  .privacy-checkbox{
-    display: flex;
+  .privacy-checkbox {
     color: #fff;
-    opacity: 0.8;
+    display: flex;
     gap: 1.4rem;
-    margin-top: 2rem;
-    a{
+    margin-block-start: 2rem;
+    opacity: 0.8;
+
+    a {
       color: #fff;
       text-decoration: underline;
     }
     
     .myinput {
-      margin-top: -0.2rem;
       appearance: none;
-      -webkit-appearance: none;
-      width: 2rem;
-      height: 2rem;
-      border-radius: 0.2rem;
+      appearance: none;
       background: #fff;
-      position: relative;
+      block-size: 2rem;
+      border-radius: 0.2rem;
       cursor: pointer;
+      inline-size: 2rem;
+      margin-block-start: -0.2rem;
+      position: relative;
       transition: background-color 0.1s;
     }
 
     .myinput:checked {
-      background-color: #BFC6CC;
+      background-color: #bfc6cc;
     }
 
     .myinput:checked::after {
-      inset: 0;
-      position: absolute;
       content: url("data:image/svg+xml;utf8,\
       <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'>\
       <path d='M14 7L8.5 12.5L6 10' stroke='%2310001D' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/>\
       </svg>");
+      inset: 0;
+      position: absolute;
     }
 
 
   }
 
-  .under-form{
-    display: flex;
+  .under-form {
     align-items: center;
-    justify-content: space-between;
+    display: flex;
     flex-wrap: wrap;
-    padding: 0 8rem 0 0;
+    justify-content: space-between;
+    padding-block: 0;
+    padding-inline: 0 8rem;
   }
 
 }

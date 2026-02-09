@@ -14,7 +14,6 @@ add_filter('Flynt/addComponentData?name=BlockContacts', function ($data) {
             'email' => __('E-pastam ir nederīgs formāts', 'flynt')
         ]
     ];
-    
     return $data;
 });
 
@@ -128,7 +127,7 @@ function getACFLayout()
                 'label' => 'Socials Section',
                 'name' => 'socialsSection',
                 'type' => 'group',
-                'sub_fields' =>[
+                'sub_fields' => [
                     [
                         'label' => 'Title',
                         'name' => 'title',
