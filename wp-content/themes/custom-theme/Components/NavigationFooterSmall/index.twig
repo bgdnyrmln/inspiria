@@ -1,0 +1,18 @@
+<flynt-component name="NavigationFooterSmall" style="background-image: url('{{ backgroundImage }}');">
+  <div class = "overlay">
+    <div class = "wrapper">
+      <img class= "logo" src="{{ logo.src }}">
+      <div class = "links">
+        {% for item in links %}
+          <a class = "link" href="{{ item.link.url }}">{{ item.text }}</a>
+        {% endfor %}
+      </div>
+      <a class="privacy-link" href="{{ privacy.url }}">{{ privacy.title }}</a>  
+      <div class="legal">
+        <a href="https://grandem.lv/" class="dev" target="_blank">
+          <img src="{{ dev }}" alt="">
+        </a>
+      </div>
+    </div>
+  </div>
+</flynt-component>

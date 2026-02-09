@@ -116,4 +116,20 @@ flynt-component[name='BlockContacts'] {
     gap: 2rem 5rem;
   } 
 
+
+  .socials{
+    margin-top: 2rem;
+
+    h1{
+      font-size: 1.6rem;
+      font-weight: 600;
+      font-variation-settings: 'CRSV' 1;
+    }
+
+    img{
+      margin-top: -1.5rem;
+      inline-size: 3.2rem;
+    }
+  }
+
 }

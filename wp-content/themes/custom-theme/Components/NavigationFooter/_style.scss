@@ -15,7 +15,7 @@ flynt-component[name='NavigationFooter'] {
     margin-inline: auto;
   }
 
-
+  
   h1 {
     color: var(--color-secondary);
     font-size: 1.4rem;
@@ -124,3 +124,7 @@ flynt-component[name='NavigationFooter'] {
 }
 
 
+.page-id-22 flynt-component[name="NavigationFooter"],
+.page-id-3 flynt-component[name="NavigationFooter"] {
+  display: none;
+}

@@ -1,0 +1,24 @@
+<flynt-component name="BlockMap">
+    <div class="wrapper">
+        <div class = "heading">
+            <h1>{{title}}</h1>
+            <p>{{subtitle}}</p>
+            <div style="display: flex; gap: 1.4rem;">
+                {% for item in socials %}
+                    <a class="icon" href="{{ item.link }}"><img src="{{ item.icon }}" alt=""></a>
+                {% endfor %}
+            </div>
+        </div>
+        <iframe
+            class="w-full h-full"
+            frameborder="0"
+            scrolling="no"
+            marginheight="0"
+            marginwidth="0"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6875.000000000000!2d24.105186!3d56.949649!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTYuOTQ5NjQ5LCAyNC4xMDUxODY!5e0!3m2!1sen!2s!4v1695060000000!5m2!1sen!2s"
+            allowfullscreen=""
+            aria-hidden="false"
+            tabindex="0"
+        ></iframe>
+    </div>
+</flynt-component>

@@ -125,53 +125,35 @@ function getACFLayout()
                 ]
             ],
             [
-                'label' => 'Whatsapp',
-                'name' => 'whatsapp',
-                'type' => 'link',
-                'return_format' => 'array'
-            ],
-            [
-                'label' => 'Waze',
-                'name' => 'waze',
-                'type' => 'link',
-                'return_format' => 'array'
-            ],
-            [
-                'label' => 'Google',
-                'name' => 'google',
-                'type' => 'link',
-                'return_format' => 'array'
-            ],
-            [
-                'label' => 'Image',
-                'name' => 'image',
-                'type' => 'image',
-                'return_format' => 'array',
-                'preview_size' => 'thumbnail',
-                'library' => 'all',
-            ],
-            [
-                'label' => 'Items',
-                'name' => 'items',
-                'type' => 'repeater',
-                'collapsed' => '',
-                'min' => 0,
-                'max' => 0,
-                'layout' => 'table',
-                'button_label' => 'Add Item',
-                'sub_fields' => [
-                    [
-                        'label' => 'Icon',
-                        'name' => 'icon',
-                        'type' => 'image',
-                        'return_format' => 'array',
-                        'preview_size' => 'thumbnail',
-                        'library' => 'all',
-                    ],
+                'label' => 'Socials Section',
+                'name' => 'socialsSection',
+                'type' => 'group',
+                'sub_fields' =>[
                     [
                         'label' => 'Title',
                         'name' => 'title',
                         'type' => 'text'
+                    ],
+                    [
+                        'label' => 'Socials',
+                        'name' => 'socials',
+                        'type' => 'repeater',
+                        'button_label' => 'Add Social Link',
+                        'sub_fields' => [
+                            [
+                                'label' => 'Icon',
+                                'name' => 'icon',
+                                'type' => 'image',
+                                'return_format' => 'array',
+                                'preview_size' => 'thumbnail',
+                                'library' => 'all',
+                            ],
+                            [
+                                'label' => 'Link',
+                                'name' => 'link',
+                                'type' => 'url',
+                            ],
+                        ]
                     ],
                 ]
             ],
