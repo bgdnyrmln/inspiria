@@ -1,0 +1,84 @@
+<flynt-component name="BlockResources" class="block-resources">
+  <div class = "wrapper">
+    <div class = "heading">
+      {% if title %}
+        <h1>{{ title }}</h1>
+      {% endif %}
+      {% if subtitle %}
+        <p>{{ subtitle }}</p>
+      {% endif %}
+    </div>
+    <div class = "boxes">
+      {% if links %}
+        {% for item in links %}
+          <article class="box">
+            <h4>{{ item.title }}</h4>
+            <p>{{ item.subtitle }}</p>
+            <div class = "box-bottom">
+              {% if item.url %}
+                <a href="{{ item.url }}" class="box-link">
+                  <p>{{ item.text }}</p>
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="32" height="32" rx="16" fill="#0F0F0F"/>
+                  <path d="M10.9092 15.9998H21.091" stroke="white" stroke-width="1.45455" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M15.999 10.9091L21.0899 16.0001L15.999 21.091" stroke="white" stroke-width="1.45455" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+
+                </a>
+              {% endif %}
+              <h3>{{ groups.links }}</h3>
+            </div>
+          </article>
+        {% endfor %}
+      {% endif %}
+      {% if videos %}
+        {% for item in videos %}
+          <article class="box">
+            <h4>{{ item.title }}</h4>
+            <p>{{ item.subtitle }}</p>
+            <div class = "box-bottom">
+              <button class="box-link" data-modal-open>
+                <p>{{ item.text }}</p>
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="32" height="32" rx="16" fill="#0F0F0F"/>
+                <path d="M10.9092 15.9998H21.091" stroke="white" stroke-width="1.45455" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M15.999 10.9091L21.0899 16.0001L15.999 21.091" stroke="white" stroke-width="1.45455" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <h3>{{ groups.videos }}</h3>
+            </div>
+            {# MODAL — scoped to this item #}
+            <div class="modal" aria-hidden="true">
+              <div class="modal__overlay" data-modal-close></div>
+
+              <div class="modal__content">
+                <div class="modal__body">
+                  {{ item.url }}
+                </div>
+              </div>
+            </div>
+          </article>
+        {% endfor %}
+      {% endif %}
+      {% if dl_content %}
+        {% for item in dl_content %}
+          <div class = "box">
+            <h4>{{ item.title }}</h4>
+            <p>{{ item.subtitle }}</p>
+            <div class = "box-bottom">
+              <a href="{{ item.file }}" class="box-link" download="{{ item.file }}">
+                <p>{{ item.text }}</p>
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="32" height="32" rx="16" fill="#0F0F0F"/>
+                <path d="M10.9092 15.9998H21.091" stroke="white" stroke-width="1.45455" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M15.999 10.9091L21.0899 16.0001L15.999 21.091" stroke="white" stroke-width="1.45455" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <h3>{{ groups.dl_content }}</h3>
+            </div>
+          </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+</flynt-component>

@@ -43,6 +43,12 @@
     "src": "Components/BlockPrivacy/script.js",
     "isDynamicEntry": true
   },
+  "Components/BlockResources/script.js": {
+    "file": "assets/script-DLfavU0H.js",
+    "name": "script",
+    "src": "Components/BlockResources/script.js",
+    "isDynamicEntry": true
+  },
   "Components/BlockVideoOembed/script.js": {
     "file": "assets/script-ib-zL1nW.js",
     "name": "script",
@@ -170,6 +176,10 @@
     "file": "assets/image copy 23-CyfL13rk.png",
     "src": "assets/images/image copy 23.png"
   },
+  "assets/images/image copy 24.png": {
+    "file": "assets/image copy 24-CHGPZnFw.png",
+    "src": "assets/images/image copy 24.png"
+  },
   "assets/images/image copy 7.png": {
     "file": "assets/image copy 7-Cld3IBFI.png",
     "src": "assets/images/image copy 7.png"
@@ -199,7 +209,7 @@
     "src": "assets/images/logoheader.svg"
   },
   "assets/main.js": {
-    "file": "assets/main-eSfZnTFO.js",
+    "file": "assets/main-Cz8kjmll.js",
     "name": "main",
     "src": "assets/main.js",
     "isEntry": true,
@@ -209,6 +219,7 @@
       "Components/BlockExample/script.js",
       "Components/BlockHero/script.js",
       "Components/BlockPrivacy/script.js",
+      "Components/BlockResources/script.js",
       "Components/BlockVideoOembed/script.js",
       "Components/GridPostsArchive/script.js",
       "Components/NavigationBurger/script.js",
@@ -216,7 +227,7 @@
     ]
   },
   "assets/main.scss": {
-    "file": "assets/main-C8-Fom3S.css",
+    "file": "assets/main-BCSwGHMq.css",
     "src": "assets/main.scss",
     "isEntry": true,
     "name": "main",

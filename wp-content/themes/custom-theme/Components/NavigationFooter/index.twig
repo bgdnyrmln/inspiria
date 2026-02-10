@@ -1,48 +1,50 @@
 <flynt-component name="NavigationFooter" style="background-image: url('{{ backgroundImage }}');">
   <div class = "footer-container">
-    <div class = "footer-left">
-      <div class = "contact-info left-section">
-        <div class = "item">
-          <h1>{{ contactInfo.contactInfoTab.label }}</h1>
-          <div>
-            <p>{{ contactInfo.contactInfoTab.phone }}</p>
-            <p>{{ contactInfo.contactInfoTab.email }}</p>
+    <div class ="wrapper">
+      <div class = "footer-left">
+        <div class = "contact-info left-section">
+          <div class = "item">
+            <h1>{{ contactInfo.contactInfoTab.label }}</h1>
+            <div>
+              <p>{{ contactInfo.contactInfoTab.phone }}</p>
+              <p>{{ contactInfo.contactInfoTab.email }}</p>
+            </div>
+          </div>
+          <div class = "item">
+            <h1>{{ contactInfo.addressTab.label }}</h1>
+            <p>{{ contactInfo.addressTab.address }}</p>
           </div>
         </div>
-        <div class = "item">
-          <h1>{{ contactInfo.addressTab.label }}</h1>
-          <p>{{ contactInfo.addressTab.address }}</p>
+        <div class = "socials left-section">
+          <h1>{{ socialsSection.label }}</h1>
+          <div style="display: flex; gap: 1.2rem;">
+            {% for item in socialsSection.socials %}
+              <a class="icon" href="{{ item.link }}"><img src="{{ item.icon }}" alt=""></a>
+            {% endfor %}
+          </div>
+        </div>
+        <div class = "navigation-footer left-section">
+          <nav>
+            {% if menu %}
+              {% include 'Partials/_menu.twig' with {'items': menu.get_items} only %}
+            {% endif %}
+          </nav>
+        </div>
+        <div class = "footer-bottom left-section">
+        <div class="privacy">
+          <a class="privacy-link" href="{{ privacy.url }}">{{ privacy.title }}</a>
+        </div>
+        <img class = "logo-footer" src="{{ logo.src }}">
+        <div class="legal">
+          <a href="https://grandem.lv/" class="dev" target="_blank">
+            <img src="{{ dev }}" alt="">
+          </a>
+        </div>
         </div>
       </div>
-      <div class = "socials left-section">
-        <h1>{{ socialsSection.label }}</h1>
-        <div style="display: flex; gap: 1.2rem;">
-          {% for item in socialsSection.socials %}
-            <a class="icon" href="{{ item.link }}"><img src="{{ item.icon }}" alt=""></a>
-          {% endfor %}
-        </div>
+      <div class = "footer-right">
+        {{ renderComponent("ContactForm") }}
       </div>
-      <div class = "navigation-footer left-section">
-        <nav>
-          {% if menu %}
-            {% include 'Partials/_menu.twig' with {'items': menu.get_items} only %}
-          {% endif %}
-        </nav>
-      </div>
-      <div class = "footer-bottom left-section">
-      <div class="privacy">
-        <a class="privacy-link" href="{{ privacy.url }}">{{ privacy.title }}</a>
-      </div>
-      <img class = "logo-footer" src="{{ logo.src }}">
-      <div class="legal">
-        <a href="https://grandem.lv/" class="dev" target="_blank">
-          <img src="{{ dev }}" alt="">
-        </a>
-      </div>
-      </div>
-    </div>
-    <div class = "footer-right">
-      {{ renderComponent("ContactForm") }}
     </div>
   </div>
 </flynt-component>

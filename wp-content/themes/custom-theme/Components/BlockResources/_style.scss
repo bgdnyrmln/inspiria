@@ -1,0 +1,112 @@
+flynt-component[name='BlockResources'] {
+  .wrapper {
+    inline-size: 144rem;
+    margin-block: 0;
+    margin-inline: auto;
+    padding-block: 7rem 10rem;
+    padding-inline: 8rem;
+  }
+
+
+  .heading {
+    block-size: 9.8rem;
+    border-block-end: 1px solid #210a001a;
+    display: flex;
+    inline-size: 128rem;
+    justify-content: space-between;
+    
+    h1 {
+      font-size: 4.6rem;
+    }
+
+    p {
+      color: #5d5e63;
+      font-variation-settings: 'CRSV' 0;
+      font-weight: 400;
+      inline-size: 58.4rem;
+      margin-block-start: -1rem;
+      text-align: end;
+    }
+  }
+
+  .boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-block: 6rem 0;
+    padding-inline: 0;
+  }
+
+  .box {
+    background-color: #f9f9f9;
+    block-size: 19.2rem;
+    border-radius: 0.5rem;
+    inline-size: 63rem;
+    padding-block: 2.4rem;
+    padding-inline: 2.4rem;
+    position: relative;
+
+    h4 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-block: 0 1rem;
+      margin-inline: 0;
+    }
+
+    p {
+      font-weight: 400;
+    }
+
+    h3 {
+      color: #0f0f0f;
+      font-size: 1.4rem;
+      font-weight: 300;
+      opacity: 0.3;
+    }
+
+    .box-bottom {
+      align-items: center;
+      block-size: 3.2rem;
+      display: flex;
+      inline-size: 58.2rem;
+      inset-block-end: 2.4rem;
+      justify-content: space-between;
+      position: absolute;
+    }
+
+    .box-link {
+      align-items: center;
+      display: flex;
+      gap: 1.4rem;
+      justify-content: space-between;
+      text-decoration: none;
+    }
+
+  }
+
+  .modal {
+    align-items: center;
+    display: none;
+    inset: 0;
+    justify-content: center;
+    position: fixed;
+    z-index: 1000;
+
+    &.is-open {
+      display: flex;
+    }
+  }
+
+  .modal__overlay {
+    background: rgba(0, 0, 0, 0.6);
+    inset: 0;
+    position: absolute;
+  }
+
+  .modal__content {
+    background-color: transparent;
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+  }
+}
