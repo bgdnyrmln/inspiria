@@ -1,5 +1,5 @@
 flynt-component[name='BlockActivities'] {
-  background-color: #10001d;
+  background-color: #376269;
   background-size: cover;
   block-size: 72.7rem;
   color: #fff;
@@ -84,7 +84,7 @@ flynt-component[name='BlockActivities'] {
 
         
       .point {
-        background-color: #d5d8ff;
+        background-color: #ffff;
         block-size: 0.7rem;
         border-radius: 100%;
         cursor: pointer;
@@ -131,7 +131,7 @@ flynt-component[name='BlockActivities'] {
     
 
   .activity-item {
-    background-color: #231633;
+    background-color: #4b7178;
     block-size: fit-content;
     border-radius: 1.5rem;
     flex-shrink: 0;
@@ -176,7 +176,7 @@ flynt-component[name='BlockActivities'] {
     }
 
     h1 {
-      color: var(--color-secondary);
+      color: #ffff;
       font-size: 1.6rem;
       font-weight: 500;
       margin-block-start: 11.6rem;

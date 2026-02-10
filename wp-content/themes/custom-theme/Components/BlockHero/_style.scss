@@ -59,14 +59,14 @@ flynt-component[name='BlockHero'] {
     }
 
     .button {
-      background-color: var(--color-secondary);
+      background-color: #0f0f0f;
       border: 0;
-      color: #0f0f0f;
+      color: #fff;
       inline-size: 15.8rem;
       transition: 0.3s ease;
 
       &:hover {
-        background-color: #b3b8fb;
+        background-color: #000;
       }
     }
   }
@@ -114,7 +114,7 @@ flynt-component[name='BlockHero'] {
 /* Full-bleed gradient overlay */
 flynt-component[name='BlockHero']::before {
   background: linear-gradient(to right,
-  rgba(#10001d, 0.5),
+  rgba(#10001d, 0.7),
   rgba(0, 0, 0, 0));
   content: '';
   inset: 0;
