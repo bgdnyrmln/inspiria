@@ -1,0 +1,50 @@
+<flynt-component name="BlockPrivacy" class="block-privacy">
+  <div class = "wrapper">
+    <div class = "left">
+      {% if title %}
+        <h1 class="block-privacy__title">{{ title }}</h1>
+      {% endif %}
+
+      <aside class="block-privacy__sidebar">
+        {% for tab in tabs %}
+          <button class="block-privacy__button {% if loop.first %}is-active{% endif %}" data-tab="{{ loop.index0 }}" type="button">
+            <p>{{ tab.button }}</p>
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        {% endfor %}
+      </aside>
+    </div>
+    <div class="block-privacy__content">
+      {% for tab in tabs %}
+        <div class="block-privacy__panel {% if loop.first %}is-active{% endif %}" data-tab="{{ loop.index0 }}">
+          {% if tab.content.title %}
+            <h2>{{ tab.content.title }}</h2>
+          {% endif %}
+
+          {% if tab.content.paragraph %}
+            <p>{{ tab.content.paragraph }}</p>
+          {% endif %}
+
+          {% if tab.content.title2 %}
+            <h2>{{ tab.content.title2 }}</h2>
+          {% endif %}
+
+          {% if tab.content.paragraph2 %}
+            <p>{{ tab.content.paragraph2 }}</p>
+          {% endif %}
+
+          {% if tab.content.list %}
+            <ul>
+              {% for item in tab.content.list %}
+                <li>{{ item.content }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+</flynt-component>

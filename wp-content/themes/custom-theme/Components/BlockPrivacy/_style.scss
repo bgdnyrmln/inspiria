@@ -1,0 +1,82 @@
+flynt-component[name='BlockPrivacy'] {
+  .wrapper {
+    display: flex;
+    inline-size: 144rem;
+    justify-content: space-between;
+    padding-block: 8rem;
+    padding-inline: 8rem;
+  }
+
+  .left {
+    h1 {
+      font-size: 4.5rem;
+      font-weight: 500;
+      inline-size: 45.6rem;
+      margin-block-end: 4rem;
+    }
+  }
+
+  .block-privacy__content {
+    inline-size: 67rem;
+    padding-block-end: 3rem;
+
+    h2 {
+      font-size: 2rem;
+      margin-block: -1rem 2rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+      font-weight: 400;
+      line-height: 2.2rem;
+      margin-block-end: 4.2rem;
+    }
+
+    ul {
+      font-size: 1.6rem;
+      font-weight: 400;
+      line-height: 3rem;
+      margin-block-start: -2.7rem;
+      margin-inline-start: 1.4rem;
+    }
+  }
+
+  .block-privacy__sidebar {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .block-privacy__button {
+    align-items: center;
+    background: none;
+    block-size: 3.9rem;
+    border: 0;
+    cursor: pointer;
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: 500;
+    inline-size: 23.8rem;
+    justify-content: space-between;
+    margin-block-end: 1.1rem;
+    padding-block: 0;
+    padding-inline: 1rem;
+    text-align: start;
+    transition: 0.3s ease;
+  }
+
+  .block-privacy__button.is-active {
+    background-color: #f9f9f9;
+  }
+
+  .block-privacy__button:hover {
+    background-color: #f9f9f9;
+  }
+
+  .block-privacy__panel {
+    display: none;
+  }
+
+  .block-privacy__panel.is-active {
+    display: block;
+  }
+}

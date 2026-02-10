@@ -37,6 +37,12 @@
       "_helpers-CJiaW3rk.js"
     ]
   },
+  "Components/BlockPrivacy/script.js": {
+    "file": "assets/script-B1VJe5WI.js",
+    "name": "script",
+    "src": "Components/BlockPrivacy/script.js",
+    "isDynamicEntry": true
+  },
   "Components/BlockVideoOembed/script.js": {
     "file": "assets/script-ib-zL1nW.js",
     "name": "script",
@@ -152,6 +158,10 @@
     "file": "assets/image copy 18-CkH6NM8g.png",
     "src": "assets/images/image copy 18.png"
   },
+  "assets/images/image copy 21.png": {
+    "file": "assets/image copy 21-wu0xFyhb.png",
+    "src": "assets/images/image copy 21.png"
+  },
   "assets/images/image copy 7.png": {
     "file": "assets/image copy 7-Cld3IBFI.png",
     "src": "assets/images/image copy 7.png"
@@ -181,7 +191,7 @@
     "src": "assets/images/logoheader.svg"
   },
   "assets/main.js": {
-    "file": "assets/main-lWzAAKdZ.js",
+    "file": "assets/main-eSfZnTFO.js",
     "name": "main",
     "src": "assets/main.js",
     "isEntry": true,
@@ -190,6 +200,7 @@
       "Components/BlockContacts/script.js",
       "Components/BlockExample/script.js",
       "Components/BlockHero/script.js",
+      "Components/BlockPrivacy/script.js",
       "Components/BlockVideoOembed/script.js",
       "Components/GridPostsArchive/script.js",
       "Components/NavigationBurger/script.js",
@@ -197,7 +208,7 @@
     ]
   },
   "assets/main.scss": {
-    "file": "assets/main-BtkDDB2e.css",
+    "file": "assets/main-C5IOn-Ml.css",
     "src": "assets/main.scss",
     "isEntry": true,
     "name": "main",
