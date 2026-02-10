@@ -3,6 +3,8 @@ flynt-component[name='BlockPrivacy'] {
     display: flex;
     inline-size: 144rem;
     justify-content: space-between;
+    margin-block: 0;
+    margin-inline: auto;
     padding-block: 8rem;
     padding-inline: 8rem;
   }

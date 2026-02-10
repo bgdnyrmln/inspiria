@@ -1,0 +1,65 @@
+flynt-component[name='BlockSupport'] {
+  .wrapper {
+    display: flex;
+    inline-size: 144rem;
+    justify-content: space-between;
+    margin-block: 0;
+    margin-inline: auto;
+    padding-block: 8rem 12.2rem;
+    padding-inline: 8rem;
+  }
+
+  h1 {
+    font-size: 4.5rem;
+    font-weight: 800;
+    margin-block-end: 2.4rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding-block: 2.4rem 1rem;
+    padding-inline: 0;
+  }
+
+  p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2.2rem;
+  }
+
+  img {
+    inline-size: 47.6rem;
+  }
+
+  .left {
+    inline-size: 67rem;
+  }
+
+  ul {
+    line-height: 2.8rem;
+    margin-inline-start: 1.2rem;
+  }
+
+  .bank-box {
+    align-items: center;
+    background-color: #5d5e631a;
+    block-size: 14.4rem;
+    display: flex;
+    flex-direction: column;
+    inline-size: 29.1rem;
+    justify-content: center;
+
+    p {
+      line-height: 2.6rem;
+    }
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 2.2rem;
+    padding-block: 1.4rem 0;
+    padding-inline: 0;
+  }
+}

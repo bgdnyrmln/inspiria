@@ -162,6 +162,14 @@
     "file": "assets/image copy 21-wu0xFyhb.png",
     "src": "assets/images/image copy 21.png"
   },
+  "assets/images/image copy 22.png": {
+    "file": "assets/image copy 22-C91EOs1m.png",
+    "src": "assets/images/image copy 22.png"
+  },
+  "assets/images/image copy 23.png": {
+    "file": "assets/image copy 23-CyfL13rk.png",
+    "src": "assets/images/image copy 23.png"
+  },
   "assets/images/image copy 7.png": {
     "file": "assets/image copy 7-Cld3IBFI.png",
     "src": "assets/images/image copy 7.png"
@@ -208,7 +216,7 @@
     ]
   },
   "assets/main.scss": {
-    "file": "assets/main-C5IOn-Ml.css",
+    "file": "assets/main-C8-Fom3S.css",
     "src": "assets/main.scss",
     "isEntry": true,
     "name": "main",

@@ -39,6 +39,7 @@ add_action('Flynt/afterRegisterComponents', function (): void {
                     Components\BlockMap\getACFLayout(),
                     Components\NavigationFooterSmall\getACFLayout(),
                     Components\BlockPrivacy\getACFLayout(),
+                    Components\BlockSupport\getACFLayout(),
                     // Add components here
                 ],
             ],

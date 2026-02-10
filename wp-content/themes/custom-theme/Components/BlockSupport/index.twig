@@ -1,0 +1,25 @@
+<flynt-component name="BlockSupport">
+  <div class = "wrapper">
+    <div class = "left">
+      <h1>{{ title }}</h1>
+      <p>{{ paragraph }}</p>
+      <h2>{{list.title}}</h2>
+      <ul class = "list">
+        {% for item in list.rows %}
+          <li>{{ item.text }}</li>
+        {% endfor %}
+      </ul>
+      <h2>{{ bank.title }}</h2>
+      <div class = "bank-box">
+        <p>
+          {{ bank.bank }} <br>
+          {{ bank.name }} <br>
+          {{ bank.iban }} <br>
+          {{ bank.swift }}
+        </p>
+      </div>
+      <h3>{{ message }}</h3>
+    </div>
+    <img src="{{ image.src }}">
+  </div>
+</flynt-component>
